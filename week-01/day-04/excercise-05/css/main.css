@@ -1,0 +1,30 @@
+h1 {
+    color: #0006E2;
+}
+
+h2 {
+    color: #EBA224;
+}
+
+ul {
+    color: #0006E2;
+    list-style: square;
+}
+
+.disc {
+    list-style: disc;
+    color: #000;
+}
+
+.numbers {
+    list-style: decimal;
+    color: #000;
+}
+
+/* descendant inheritance
+https://developer.mozilla.org/en-US/docs/Web/CSS/Descendant_selectors
+ */
+
+ul ul li:last-child{
+    color: red;
+}

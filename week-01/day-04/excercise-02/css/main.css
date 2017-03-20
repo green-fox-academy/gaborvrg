@@ -1,0 +1,32 @@
+ul {
+    width: 350px;
+    border: 15px solid rgb(66, 133, 244);
+    padding: 0px;
+}
+
+li {
+    font-size: 36px;
+    font-family: arial;
+    color: #fff;
+    list-style-type: none;
+    text-align: center;
+    width: 350px;
+    padding: 50px 0px;
+
+}
+
+.north {
+    background: rgb(230, 118, 118);
+}
+
+.east {
+    background: rgb(242,240,97);
+}
+
+.south {
+    background: rgb(169, 230, 230);
+}
+
+.west {
+    background: rgb(118,146,228);
+}

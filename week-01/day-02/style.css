@@ -1,0 +1,77 @@
+/**{
+    margin: 0px
+    padding: 0px;
+    univerzalis szelektor
+}   */
+
+/*komment keszites = cmd + /    */
+
+
+body {
+    font-family: 'Merriweather', serif;
+    background: #FFFFFF;
+    margin: 0;
+    color: rgba(0,0,0,0.8);
+}
+
+.batman {
+    position:relative;
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+}
+
+.batman_text{
+    text-align: center;
+}
+
+img {
+    width: 100%;
+}
+
+.spaces {
+    text-align: center;
+}
+
+.erikahall {
+    width: 50%;
+    float: left;
+    margin: 10px;
+}
+
+
+
+article {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    /*margin-right: 100px;
+    margin-left: 100px;*/
+    margin-top: 70px;
+    font-size: 18px;
+    line-height: 28px;
+    margin-bottom: 100px;
+}
+
+h1, h2 {
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+h1 {
+    font-size: 34px;
+    line-height: 40px;
+}
+
+h2 {
+    color: rgba(0,0,0,.44);
+    font-weight: normal;
+    line-height: 28px;
+    font-size: 22px
+}
+
+a {
+    color:red;
+    font-weight: bold;
+}

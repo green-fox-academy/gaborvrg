@@ -1,0 +1,32 @@
+p {
+    border: 1px solid black;
+    padding: 30px;
+    margin: 10px;
+    width: 400px;
+    font-size: 18px;
+    background-repeat: no-repeat;
+    background-image: url(../duck.png);
+    text-align: center;
+    color: #fff;
+    font-family: courier;
+    font-weight: lighter;
+}
+
+.first {
+    background-size: 80px;
+    background-color: #FD644E;
+    background-position: left center;
+}
+
+.second {
+    background-size: 200px;
+    background-color: #633878;
+    background-position: center;
+}
+
+.third {
+    background-size: 80px;
+    background-color: #808080;
+    background-position: right bottom;
+    padding-bottom: 5px;
+}

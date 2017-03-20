@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>CSS for Beginners</title>
+    <link rel="stylesheet" href=" css/style.css">
+
+    <style>
+        body {
+            color: #000;
+        }
+        main-content {
+            background: #fff;
+            width: 1200px;
+            margin: 0, auto;
+            height: 100%;
+            padding: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main-content">
+        <h1>CSS for beginners</h1>
+        <div class="box">This is the content This is the content This is the content This is the content This is the content This is the content This is the content This is the content This is the content</div>
+        <div class="box">This is the content</div>
+    </div>
+
+</body>
+</html>
