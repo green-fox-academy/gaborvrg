@@ -1,1 +1,1 @@
-[https://github.com/greenfox-academy/zodiac-syllabus Zodiac's syllabus]
+[I'm an inline-style link with title](https://greenfoxacademz.com )
