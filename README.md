@@ -1,1 +1,1 @@
-[I'm an inline-style link with title](https://greenfoxacademz.com )
+[Green Fox Academy / zodiac syllabus](https://github.com/greenfox-academy/zodiac-syllabus )
