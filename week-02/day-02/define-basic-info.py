@@ -8,7 +8,7 @@ myname = 'Gabor Varga'
 myage = int(42)
 myheight = float(1.84)
 
-married = False;
+married = False
 
 print('My name is: ' + myname)
 print('My age is: ', myage)
