@@ -22,13 +22,13 @@ boys_come_to_party = int(input())
 
 
 if girls_come_to_party == boys_come_to_party and girls_come_to_party + boys_come_to_party > 20:
-	print('The party is exellent!')
+    print('The party is exellent!')
 elif girls_come_to_party + boys_come_to_party > 20 and girls_come_to_party / boys_come_to_party > 1:
-	print ('Quite cool party! ')
+    print ('Quite cool party! ')
 elif girls_come_to_party + boys_come_to_party < 20:
-	print ('Average party... ')
+    print ('Average party... ')
 elif girls_come_to_party == 0:
-	print ('Sausage party ')
+    print ('Sausage party ')
 
 
 

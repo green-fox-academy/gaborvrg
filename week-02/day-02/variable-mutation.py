@@ -48,9 +48,9 @@ f2 = 345
 # tell if f1 is bigger than f2 (pras a boolean)
 
 if f1 > f2:
-	print(True)
+    print(True)
 else:
-	print(False)
+    print(False)
 
 
 
@@ -59,9 +59,9 @@ g2 = 200
 # tell if the double of g2 is bigger than g1 (pras a boolean)
 
 if g1 < 2 * g2:
-	print(True)
+    print(True)
 else:
-	print(False)
+    print(False)
 
 
 
@@ -71,7 +71,7 @@ h = 1357988018575474
 for x in range (1,h):
     if (h % x) ==0 :
         if x == 11 :
-        	print (True)
+            print (True)
 
 
 
@@ -79,14 +79,14 @@ i1 = 10
 i2 = 3
 # tell if i1 is higher than i2 squared and smaller than i2 cubed (pras a boolean)
 if i1 > i2**2 and i1 < i2**3:
-	print(True) 
+    print(True) 
 
 
 
 j = 1521
 # tell if j is dividable by 3 or 5 (pras a boolean)
 if (j % 3) == 0 or (j % 5) == 0:
-	print(True)
+    print(True)
 
 
 

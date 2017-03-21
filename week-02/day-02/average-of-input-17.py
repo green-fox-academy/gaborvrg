@@ -8,8 +8,8 @@ num_ints = 5
 
 
 for x in range(num_ints):
-	numbers = int(input())
-	summ = numbers + summ
+    numbers = int(input())
+    summ = numbers + summ
 
 
 print('Sum: ', summ)

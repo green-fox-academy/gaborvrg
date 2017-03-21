@@ -9,11 +9,11 @@ number = int(input())
 
 
 if number <= 0:
-	print('Not enough !')
+    print('Not enough !')
 elif number == 1:
-	print('One !')
+    print('One !')
 elif number == 2:
-	print('Two !')
+    print('Two !')
 else:
-	print('A lot!')
+    print('A lot!')
 

@@ -7,6 +7,6 @@ print('Second number: ')
 second_number = int(input())
 
 if first_number > second_number:
-	print('This is the bigger number', first_number)
+    print('This is the bigger number', first_number)
 else:
-	print('This is the bigger number', second_number)
+    print('This is the bigger number', second_number)

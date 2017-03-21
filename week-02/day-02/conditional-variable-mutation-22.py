@@ -3,7 +3,7 @@ out = 0
 # if w is even increment out by one
 
 if a % 2 == 0:
-	a += 1
+    a += 1
 print(out)
 
 
@@ -18,11 +18,11 @@ out2 = ""
 # if less than 10 set out2 to "More!",
 # if more than 20 set out2 to "Less!"
 if b > 10 and b < 20:
-	out2 = "Sweet"
+    out2 = "Sweet"
 elif b < 10:
-	out2 = "More"
+    out2 = "More"
 elif b > 20:
-	out2 = "Less"
+    out2 = "Less"
 
 print(out2)
 
@@ -44,11 +44,11 @@ is_bonus = False
 
 
 if credits >= 50 and is_bonus is False:
-	c += 2
+    c += 2
 elif credits < 50 and is_bonus is False:
-	c -= 1
+    c -= 1
 elif is_bonus is True:
-	c = c
+    c = c
 
 
 print(c)
@@ -74,11 +74,11 @@ out3 = ""
 
 
 if d % 4 == 0 and time >= 200:
-	out3 = "check"
+    out3 = "check"
 elif time > 200:
-	out3 = "Time out"
+    out3 = "Time out"
 else:
-	out3 = "Run Forest Run"
+    out3 = "Run Forest Run"
 
 print(out3)
 
