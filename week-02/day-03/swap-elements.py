@@ -4,12 +4,12 @@
 
 abc = ["first", "second", "third"]
 
-# first = abc[0]
-# third = abc[2]
+first = abc[0]
+third = abc[2]
 
-# abc[0] = third
-# abc[2] = first
+abc[0] = third
+abc[2] = first
 
-abc.reverse()
+# abc.reverse()
 
 print(abc)  
