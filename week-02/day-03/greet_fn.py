@@ -6,8 +6,8 @@
 al = "Greenfox"
 
 
-def greet(al):
-    print('Greetings, dear', al)
+def greet(gr):
+    print('Greetings, dear', gr)
 
 
 greet(al)
