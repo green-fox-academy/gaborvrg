@@ -10,5 +10,4 @@ third = abc[2]
 abc[0] = third
 abc[2] = first
 
-
 print(abc)  
