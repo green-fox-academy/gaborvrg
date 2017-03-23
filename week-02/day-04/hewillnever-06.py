@@ -2,7 +2,7 @@
 # Your job is to decode the notSoCrypticMessage by using the hashmap as a look up table
 # Assemble the fragments into the out variable
 
-out = "";
+out = ""
 notSoCrypticMessage = [1, 12, 1, 2, 11, 1, 7, 11, 1, 49, 1, 3, 11, 1, 50, 11]
 
 hashmap = [
@@ -16,9 +16,30 @@ hashmap = [
     {3: "say goodbye"}
 ]
 
-print(len(notSoCrypticMessage))
+hassh = ""
 
-for i in range(len(notSoCrypticMessage)):
-    print(hashmap[i])
+# print(len(notSoCrypticMessage))
+
+# for i in range(len(notSoCrypticMessage) - 1):
+for i in range(0, len(hashmap)):
+    hassh = (hashmap[i])
+    # print(hassh)
+
+    for part in range(len(notSoCrypticMessage)):
+    # #     # print(notSoCrypticMessage[part])
+
+        if notSoCrypticMessage[part] == hassh.items(i):
+            print(key)
+
+    # for key, value in hassh.items():
+    #     if key in hassh.items() == notSoCrypticMessage[i]:
+    #         out += value 
+        # print(key,value)
+        # out += value 
 
 print(out)
+    # print(key[hassh.items()]
+    
+    # if notSoCrypticMessage[i] == hassh(items()):
+    #     print(hassh)
+
