@@ -16,30 +16,35 @@ hashmap = [
     {3: "say goodbye"}
 ]
 
-hassh = ""
+for i in notSoCrypticMessage:
+    for a in hashmap:
+        print(a)
 
-# print(len(notSoCrypticMessage))
 
-# for i in range(len(notSoCrypticMessage) - 1):
-for i in range(0, len(hashmap)):
-    hassh = (hashmap[i])
-    # print(hassh)
+# hassh = ""
 
-    for part in range(len(notSoCrypticMessage)):
-    # #     # print(notSoCrypticMessage[part])
+# # print(len(notSoCrypticMessage))
 
-        if notSoCrypticMessage[part] == hassh.items(i):
-            print(key)
+# # for i in range(len(notSoCrypticMessage) - 1):
+# for i in range(0, len(hashmap)):
+#     hassh = (hashmap[i])
+#     # print(hassh)
 
-    # for key, value in hassh.items():
-    #     if key in hassh.items() == notSoCrypticMessage[i]:
-    #         out += value 
-        # print(key,value)
-        # out += value 
+#     for part in range(len(notSoCrypticMessage)):
+#     # #     # print(notSoCrypticMessage[part])
 
-print(out)
-    # print(key[hassh.items()]
+#         if notSoCrypticMessage[part] == hassh.items():
+#             print(key)
+
+#     # for key, value in hassh.items():
+#     #     if key in hassh.items() == notSoCrypticMessage[i]:
+#     #         out += value 
+#         # print(key,value)
+#         # out += value 
+
+# print(out)
+#     # print(key[hassh.items()]
     
-    # if notSoCrypticMessage[i] == hassh(items()):
+#     # if notSoCrypticMessage[i] == hassh(items()):
     #     print(hassh)
 
