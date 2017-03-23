@@ -2,7 +2,7 @@
 
 # reversed = ".eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI"
 
-# reversed = "valami akarmi"
+
 reversed = ".eslaf eb t'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI"
 word = ""
 

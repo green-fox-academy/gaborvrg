@@ -9,6 +9,7 @@ example_new = ""
 example_list = example.split()
 example_list[2] = "galaxy"
 
+
 for i in range(len(example_list)):
     example_new += example_list[i] + " "
 
