@@ -4,8 +4,15 @@
 
 # Also, print the sentence to the output with spaces in between.
 
+# What I cannot create, I do not understand
+
 words = ["What", "I", "do", "create,", "I", "cannot", "not", "understand."]
 
+
+a, b = words.index("cannot"), words.index("do")
+words[b], words[a] = words[a], words[b]
+
+print(words)
 
 
 
