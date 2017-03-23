@@ -18,7 +18,18 @@ hashmap = [
 
 for i in notSoCrypticMessage:
     for a in hashmap:
-        print(a)
+print(a)
+
+
+
+
+
+
+
+
+
+
+
 
 
 # hassh = ""

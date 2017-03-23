@@ -13,6 +13,3 @@ a, b = words.index("cannot"), words.index("do")
 words[b], words[a] = words[a], words[b]
 
 print(words)
-
-
-
