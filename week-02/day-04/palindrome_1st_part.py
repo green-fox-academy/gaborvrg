@@ -8,14 +8,16 @@
 
 # create_palindrome(input())
 
+# def create_palindrome(text):
 
-def create_palindrome(text):
-    # print(text[::-1])
-    for i in len(text):
-                        
+text = "akarmi"
+alist = ""
+
+for i in range(1, len(text) + 1):
+    alist += text[(len(text) - i)]
+print(text + alist)
 
 
+# create_palindrome(input())
 
-create_palindrome(input())
-
-print()
+# print()
