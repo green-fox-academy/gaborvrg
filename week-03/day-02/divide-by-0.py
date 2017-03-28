@@ -8,6 +8,8 @@
 # except IOError:
 #     print('cannot open', arg)
 
+
+
 while True:
     try:
         number = int(input("Type an integer: "))
