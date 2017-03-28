@@ -4,10 +4,22 @@
 
 my_file = open("reversed-order.txt", "r")
 
-alist = my_file.readlines()
+def decrypt(file_name):
 
-for lines in reversed(alist):
-    print(lines.rstrip())
+    text = ""
+    alist = file_name.readlines()
+
+    for lines in reversed(alist):
+        text += str(lines)
+    return(text)
+
+print(decrypt(my_file))
+
+
+# alist = my_file.readlines()
+
+# for lines in reversed(alist):
+#     print(lines.rstrip())
 
 
 # reversed_text = ""
