@@ -5,4 +5,11 @@
 
 my_file = open("reversed-lines.txt", "r")
 
-print(my_file.read()[::-1])
+for line in my_file:
+
+    rev_file = line[::-1]
+
+    print(rev_file.lstrip())
+
+
+my_file.close()
