@@ -11,7 +11,7 @@ def decrypt(file_name):
         rev_file = line[::-1]
         text += rev_file
     my_file.close()
-    return(text)
+    return text
 
 print(decrypt(my_file))
 

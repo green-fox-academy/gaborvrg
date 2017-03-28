@@ -4,16 +4,28 @@
 # def five_most_frequent():
 #     pass
 
-
 my_file = open("otos.txt", "r")
 
-lottery_dict = {}
+lottery_dict = dict()
+
+# print(lottery_dict)
 
 for line in my_file:
 
     line_list = my_file.readline().rstrip().split(";")
-    # print(type(line_list[12:16]))
-    print(line_list[11:16])
+    # print(line_list[12:16])
+    for number in line_list[12:16]:
+        # print(number)
+        if number not in lottery_dict:
+            lottery_dict[number] = 1 
+        else:
+            lottery_dict[number] += 1
+
+
+print(sorted(lottery_dict.values()))
+
+# print(lottery_dict)
+my_file.close()
 
 
 
