@@ -8,13 +8,11 @@ my_file = open("otos.txt", "r")
 
 lottery_dict = dict()
 
-# print(lottery_dict)
-
 for line in my_file:
 
-    line_list = my_file.readline().rstrip().split(";")
-    # print(line_list[12:16])
-    for number in line_list[12:16]:
+    line_list = line.rstrip().split(";")
+    # print(line_list[11:16])
+    for number in line_list[11:16]:
         # print(number)
         if number not in lottery_dict:
             lottery_dict[number] = 1 
@@ -22,25 +20,16 @@ for line in my_file:
             lottery_dict[number] += 1
 
 
-print(sorted(lottery_dict.values()))
-
 # print(lottery_dict)
+
+print(sorted(lottery_dict.items(), key=lambda x:x[1] )[ -5:: ])
+# print(sorted(lottery_dict.items(), key=lambda x:x[1])[:5])
+
+
 my_file.close()
 
 
-
-# for key in range(1, 90):
-#         lottery_dict.setdefault(key, []).append(value
-
-# print(lottery_dict)
-
-
-
-# for key, value in range:
-
-# line_list.append(my_file.readline().split(";"))
-
-
+# line_list = line.rstrip().split(";")
 
 
 
