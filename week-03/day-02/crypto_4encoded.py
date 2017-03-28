@@ -4,6 +4,19 @@
 
 my_file = open("encoded-lines.txt", "r")
 
-alist = my_file.readline()
+text = ""
 
-print(alist)
+for line in my_file: # Uif [fo pg Qzuipo
+    row = ""
+    for number in range(len(line)):
+        if ord(line[number]) == 32:
+            row += chr(ord(line[number]))
+        else:
+            row += chr(ord(line[number]) - 1)
+
+    text += row + "\n"
+    
+print(text)
+my_file.close()
+
+
