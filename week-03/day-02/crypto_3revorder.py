@@ -4,17 +4,20 @@
 
 my_file = open("reversed-order.txt", "r")
 
-reversed_text = ""
-reversed_list = []
-rev_list = []
+alist = my_file.readlines()
 
-for i in my_file:
-    reversed_list.append(i)
-rev_list = reversed_list[::-1]
-
-print(' '.join(rev_list))
-
-my_file.close()
+for lines in reversed(alist):
+    print(lines.rstrip())
 
 
+# reversed_text = ""
+# reversed_list = []
+# rev_list = []
 
+# for i in my_file:
+#     reversed_list.append(i)
+# rev_list = reversed_list[::-1]
+
+# print(' '.join(rev_list))
+
+# my_file.close()
