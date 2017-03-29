@@ -10,14 +10,16 @@ root = Tk()
 canvas = Canvas(root, width='300', height='300')
 canvas.pack()
 
-def drawing(x, color):
+def drawing(x):
 
-    for a in range(x, 1, -10):
+    a = 120
 
-        canvas.create_rectangle(150 - x / 2, 150 - x / 2, 150 + x + a / 2, 150 + x / 2 + a, fill=color)
+    color_list = ['#9400D3','#4B0082','#0000FF','#00FF00','#FFFF00','#FF7F00','#FF0000']
 
+    for color in color_list:
+        a -= 15
+        canvas.create_rectangle(150 - x / 2 - a, 150 - x / 2 - a, 150 + x / 2 + a, 150 + x / 2 + a, fill = color)
 
-drawing(70, 'red')
-
+drawing(50)
 
 root.mainloop()
