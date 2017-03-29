@@ -13,7 +13,7 @@ canvas.pack()
 def drawing(x):
 
 
-    canvas.create_rectangle(50, 50, 50 + x, 50 + x, width = 3, fill='red')
+    canvas.create_rectangle(150 - x / 2, 150 - x / 2, 150 + x / 2, 150 + x / 2, width = 3, fill='red')
     
 drawing(150)
 drawing(100)
