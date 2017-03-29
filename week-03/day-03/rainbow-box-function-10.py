@@ -20,6 +20,7 @@ def drawing(x):
         a -= 15
         canvas.create_rectangle(150 - x / 2 - a, 150 - x / 2 - a, 150 + x / 2 + a, 150 + x / 2 + a, fill = color)
 
+
 drawing(50)
 
 root.mainloop()
