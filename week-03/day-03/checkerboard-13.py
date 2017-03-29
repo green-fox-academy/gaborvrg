@@ -4,16 +4,18 @@ from tkinter import *
 
 root = Tk()
 
-canvas = Canvas(root, width='320', height='320') # 40px negyzetek
+canvas = Canvas(root, width='400', height='400') # 40px negyzetek
 canvas.pack()
 
-x0 = 0
-y0 = 0
-xx = 40
-yy = 40
+x = 0
+y = 0
+xx = 0
+yy = 0
 
-for a in range(4):
-    for b in range(4):
-        canvas.create_rectangle(x0 + a*80, y0, xx + a*80, yy, fill='black')
+for a in range(0,400,100):
+    print(a)
+    canvas.create_rectangle(x + a, y + a, x + a, y + a, fill='black')
+
+
 
 root.mainloop()
