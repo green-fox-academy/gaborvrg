@@ -4,8 +4,9 @@ def count_down(number):
     if number == 0:
         return 0
     else:
-        print(number)
+        # print(number)
         return count_down(number - 1)
 
 count_down(10)
+
 
