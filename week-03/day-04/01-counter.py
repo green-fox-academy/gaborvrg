@@ -7,6 +7,6 @@ def count_down(number):
         # print(number)
         return count_down(number - 1)
 
-count_down(10)
+count_down(5)
 
 
