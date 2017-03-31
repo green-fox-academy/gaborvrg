@@ -15,7 +15,7 @@ def string_change(input):
     #     return "" + string_change(input[1:]) 
 
     else:
-        print(input)
+        #print(input)
         # print(input[0])
         return input[0] + " * " + string_change(input[1:]) 
 
