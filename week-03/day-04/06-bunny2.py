@@ -7,8 +7,7 @@ def bunnies2(num):
 
     if num == 1:
         return 2
-
-    elif num % 2 != 0:
+    if num % 2 != 0:
         return bunnies2(num - 1) + 2 
     else:
         return bunnies2(num - 1) + 3
