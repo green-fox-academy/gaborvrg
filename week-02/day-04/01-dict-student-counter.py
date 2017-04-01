@@ -13,9 +13,23 @@ students = [
         {'name': 'Gerzson', 'age': 10, 'candies': 1},
 ]
 
-candies = 0
+def students_own_candies(students_dict):
+ 
+    candies = 0
+    ages = 0
 
-for dicts in students:
-    print(dicts['name'], "has", dicts['candies'], "candies")
-    candies += dicts['candies']
-print("All numbers of candies: ", candies)
+    for dicts in students_dict:
+        print(dicts['name'], "has", dicts['candies'], "candies")
+        candies += dicts['candies']
+    return candies
+
+def sum_of_the_ages(students_ages):
+
+    ages = 0
+    for dicts in students_ages:
+        if dicts['candies'] < 5:
+            ages += dicts['age']
+    return ages
+
+print("All numbers of candies: ", students_own_candies(students))
+print("Sum of ages: ", sum_of_the_ages(students))
