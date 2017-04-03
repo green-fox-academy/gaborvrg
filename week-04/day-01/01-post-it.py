@@ -13,8 +13,6 @@ class PostIt:
     text_on_it = ''
     textColor = ''
 
-
-
 postIt_1 = PostIt()
 postIt_2 = PostIt()
 postIt_3 = PostIt()
