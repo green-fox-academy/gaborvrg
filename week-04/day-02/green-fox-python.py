@@ -86,15 +86,33 @@ class Student(Person):
     # Mentor(): sets name to Jane Doe, age to 30, gender to female, level to intermediate
 
 class Mentor(Person):
-    def __init__(self, name = 'Jane Doe', age = 30, gender = 'female', previous_organization = "The School of Life", skip_days = 0):
-        super(Mentor, self).__init__()
-        self.arg = arg
+    def __init__(self, name = 'Jane Doe', age = 30, gender = 'female', level = 'intermediate'):
+        super().__init__(name, age, gender)
+        self.level = level
         
+    def get_goal(self):
+            print("Educate brilliant junior software developers.")
 
     def introduce(self):
-        print("Hi, I'm " + self.name + " a " + str(self.age) + "year old " + self.gender)
+        print("Hi, I'm " + self.name + ", a " + str(self.age) + " year old " + self.gender + " " + self.level + " mentor.")
 
-    def get_goal(self):
-            print("My goal is: Live for the moment!")
+
+# jane = Mentor()
+# jane.get_goal()
+# jane.introduce()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
