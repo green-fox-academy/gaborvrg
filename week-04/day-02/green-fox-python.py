@@ -158,6 +158,7 @@ class Sponsor(Person):
 
 
 class LagopusClass():
+    
     def __init__(self, class_name = '', students = [], mentors = []):
         # super(LagoplusClass, self).__init__()
         self.class_name = class_name
@@ -178,9 +179,6 @@ class LagopusClass():
         
 
 
-
-
-
 people = []
 
 mark = Person('Mark', 46, 'male')
@@ -197,6 +195,7 @@ mentor = Mentor()
 people.append(mentor)
 sponsor = Sponsor()
 elon = Sponsor('Elon Musk', 46, 'male', 'SpaceX')
+people.append(elon)
 student.skip_days(3)
 
 for i in range(5):
@@ -215,19 +214,3 @@ badass.add_student(john);
 badass.add_mentor(mentor);
 badass.add_mentor(gandhi);
 badass.info();
-
-
-        
-
-
-
-
-
-
-
-
-
-
-
-
-
