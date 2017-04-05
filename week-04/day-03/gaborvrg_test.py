@@ -31,7 +31,8 @@ class TestApple(unittest.TestCase):
         self.assertEqual(anag.anagram('lacaka', 'laac'), False)
 
     def test_count_letters(self):
-        pass
+        count = Apple()
+        self.assertEqual(count.count_letters('alma'), {'a': 2, 'l': 1, 'm': 1})
 
 
 

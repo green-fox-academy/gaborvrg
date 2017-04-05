@@ -6,12 +6,14 @@ class Apple():
 
 
     def sum(self, sum_list = []):
+        
         number = 0
         for i in sum_list:
             number += i
         return number
 
     def anagram(self, string1 = '', string2 = ''):
+
         lst_1 = list(string1)
         lst_2 = list(string2)
         lst_1.sort()
@@ -25,13 +27,11 @@ class Apple():
     def count_letters(self, string_for_dict = ''):
 
         dct = dict()
-
         for i in string_for_dict:
             if i not in dct:
                 dct[i] = 1
             else:
                 dct[i] += 1
-
         return dct
 
 
