@@ -22,6 +22,20 @@ class TestApple(unittest.TestCase):
         self.assertEqual(summary.sum([2]), 2)
 
 
+    def test_anagram_true(self):
+        anag = Apple()
+        self.assertEqual(anag.anagram('laca', 'laac'), True)
+
+    def test_anagram_false(self):
+        anag = Apple()
+        self.assertEqual(anag.anagram('lacaka', 'laac'), False)
+
+    def test_count_letters(self):
+        pass
+
+
+
+
 
 if __name__ == '__main__':
     unittest.main()
