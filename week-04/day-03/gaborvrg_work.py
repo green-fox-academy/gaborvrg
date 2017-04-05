@@ -6,11 +6,12 @@ class Apple():
 
 
     def sum(self, sum_list = []):
-        
+
         number = 0
         for i in sum_list:
             number += i
         return number
+
 
     def anagram(self, string1 = '', string2 = ''):
 
@@ -24,6 +25,7 @@ class Apple():
         else:
             return False
 
+
     def count_letters(self, string_for_dict = ''):
 
         dct = dict()
@@ -35,10 +37,19 @@ class Apple():
         return dct
 
 
+    def fibonacci(self, number):
+
+        if number <= 1:
+            return number
+        else:
+            return (self.fibonacci(number-1) + self.fibonacci(number-2))
 
 
+    def function():
+        pass
 
-# apple = Apple()
+
+apple = Apple()
 
 # # # apple.get_apple()
 # # # print(apple.get_apple())
@@ -51,4 +62,7 @@ class Apple():
 
 # apple.count_letters()
 # print(apple.count_letters('alma'))
+
+# apple.fibonacci()
+print(apple.fibonacci(6))
 
