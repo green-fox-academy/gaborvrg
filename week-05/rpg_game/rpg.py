@@ -2,7 +2,7 @@ from tkinter import *
 
 class Box(object):
     def __init__(self):
-        self.testBoxX = 0 # initital choordinates
+        self.testBoxX = 0 # initial coordinates
         self.testBoxY = 0
 
     
@@ -16,8 +16,23 @@ class Box(object):
             for col in range(10):
                 canvas.create_image(col*74,row*74, image = self.gif1, anchor = NW)
 
-        self.gif2 = PhotoImage(file = 'boss.gif')
+        self.gif2 = PhotoImage(file = 'hero-down.gif')
         canvas.create_image(self.testBoxX, self.testBoxY, image = self.gif2, anchor = NW)
+
+    def walls():
+        pass
+
+
+class Matrix():
+    def __init__(self, map = []):
+        pass
+        
+
+class MyObject:
+    def __init__(self, x, y):
+        self.position = [x, y]
+
+    pass
 
 
 
