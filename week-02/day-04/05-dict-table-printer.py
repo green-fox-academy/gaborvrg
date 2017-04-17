@@ -28,14 +28,22 @@ def table_printer():
     print('| Ingredients       ', '| Needs cooling', '| In stock |')
     print('+--------------------+---------------+----------+')
 
-    lista = list()
+    # lista = list()
     num = 0
+
 
     for lst in ingredients:
         for key,value in lst.items():
+            if lst['needs_cooling'] == True:
+                lst['needs_cooling'] = 'Yes'
+            else:
+                lst['needs_cooling'] = 'No'
+
             if num % 2 == 0:
-                print('| {0:19}| {1:13} | {2:8} |'.format(key, str(lst['needs_cooling']), value))
+                print('| {0:19}| {1:13} | {2:8} |'.format(key, str(lst['needs_cooling']), str(value)))
+
             num += 1
+
     print('+--------------------+---------------+----------+')
 
 
