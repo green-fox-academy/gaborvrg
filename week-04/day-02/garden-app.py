@@ -16,25 +16,17 @@
     # eg. watering with 10 the tree's amount of water should only increase with 4
 
 
-class Garden():
-    """docstring for Garden"""
-    def __init__(self, arg):
-        super(Garden, self).__init__()
-        self.arg = arg
-
-
-
-class Flower():
-    """docstring for TheFlower"""
-    def __init__(self, arg):
-        super(TheFlower, self).__init__()
-        self.arg = arg
         
 
-class Tree():
-    """docstring for Tree"""
-    def __init__(self, arg):
-        super(Tree, self).__init__()
-        self.arg = arg
-        
-        
+
+
+
+
+
+
+
+
+
+
+
+
