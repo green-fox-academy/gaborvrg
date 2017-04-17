@@ -23,6 +23,6 @@ def recursive_calling(x, y, size):
         recursive_calling(x + 1/3 * size, y + 2/3 * size, size/3)
 
     
-recursive_calling(10, 10, 500)
+recursive_calling(10, 10, 600)
 
 root.mainloop()
