@@ -2,20 +2,16 @@
   display: flex;
 }
 
-/*
-.item {
-  width: 300px;
-  height: 150px;
-
-}
-*/
-
-.yellow {
-  background: yellow;
-  width: 300px;
-  height: 150px;
+ul{
+  background: #ffd62a;
+  width:500px;
+  height: 400px;
+  
 }
 
-.green {
-  background: green;
+li {
+  background: purple;
+  width: 80px;
+  height: 80px;
+
 }
