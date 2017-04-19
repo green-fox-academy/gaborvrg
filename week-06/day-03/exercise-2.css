@@ -1,0 +1,15 @@
+.container {
+  display: flex;
+  background: yellow;
+  width: 600px;
+  height: 400px;
+  justify-content:center;
+  align-items: center;
+
+}
+
+.green {
+  background: green;
+  width: 60px;
+  height: 60px;
+}

@@ -1,33 +1,21 @@
 .container {
   display: flex;
-  width: auto;
-  height: 300px;
-  /*flex-wrap: wrap;*/
-  flex-direction: column;
-
 }
 
-/*.item {
-  width: 960px;
+/*
+.item {
+  width: 300px;
   height: 150px;
 
-}*/
-
-.green {
-  background: green;
-  order:1;
-  flex-grow: 1;
 }
+*/
 
 .yellow {
   background: yellow;
-  order:3;
-  flex-grow: 2
+  width: 300px;
+  height: 150px;
 }
 
-.purple {
-  background: purple;
-  order:2;
-  flex-grow: 1;
-
+.green {
+  background: green;
 }
