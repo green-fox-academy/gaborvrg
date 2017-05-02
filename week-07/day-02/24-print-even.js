@@ -3,7 +3,7 @@
 // Create a program that prints all the even numbers between 0 and 500
 
 
-for (var i = 0; i <= 500; ++i) {
+for (var i = 0; i <= 500; i++) {
     if (i === 0) {
         continue;
     } else if (i % 2 === 0) {
