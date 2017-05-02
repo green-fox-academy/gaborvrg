@@ -6,7 +6,7 @@ var b = 526;
 
 var c = a;
 a = b;
-b = c;
+sb = c;
 
 // another solution : b = [a, a = b][0];
 
