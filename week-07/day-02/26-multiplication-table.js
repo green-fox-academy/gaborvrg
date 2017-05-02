@@ -19,7 +19,7 @@ var number = 15;
 // 9 * 15 = 135
 // 10 * 15 = 150
 
-for (var i = 1; i < number + 1; i++) {
+for (var i = 1; i < 10 + 1; i++) {
     // console.log(i);
     console.log(i + ' * ' + number + ' = ' + (i * number));
 }
