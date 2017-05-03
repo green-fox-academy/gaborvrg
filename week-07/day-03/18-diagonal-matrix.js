@@ -12,11 +12,44 @@
 // * size should depend on a variable
 // ** Relax, a matrix is just like an array
 
-var sizeOfMatrix = 6;
+var sizeOfMatrix = 8;
+var matrix = [];
 
-for (var x = 1; x < sizeOfMatrix + 1; x++) {
-    // console.log(i);
+for (var x = 0; x < sizeOfMatrix; x++) {
     for (var y = 0; y < sizeOfMatrix; y++) {
+        matrix[x,y] = '0';
     }
-    console.log('0 '.repeat(y));
+    console.log(matrix);
+    // console.log('0 '.repeat(y));
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// size = 5
+// matrix = []
+
+
+// for y in range(0,size):
+//     col = []
+//     for x in range(0,size):
+//         col.append(0)
+//     col[y] = 1
+
+//     matrix.append(col)
+// print(matrix)
