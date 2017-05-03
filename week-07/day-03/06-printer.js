@@ -4,9 +4,10 @@
 //   (can have multiple number of arguments)
 
 function printer() {
-
+    var str = '';
     for (var key in arguments) {
-        console.log(arguments[key]);
+        str += arguments[key] + ',';
     }
+    return str
 }
-printer(5,6,7,8,true,'string')
+console.log(printer(5,6,7,8,true,'string'));
