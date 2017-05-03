@@ -12,7 +12,7 @@
 // * size should depend on a variable
 // ** Relax, a matrix is just like an array
 
-var sizeOfMatrix = 8;
+var sizeOfMatrix = 6;
 var matrix = [];
 
 for (var x = 0; x < sizeOfMatrix; x++) {
@@ -27,32 +27,3 @@ for (var x = 0; x < sizeOfMatrix; x++) {
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// size = 5
-// matrix = []
-
-
-// for y in range(0,size):
-//     col = []
-//     for x in range(0,size):
-//         col.append(0)
-//     col[y] = 1
-
-//     matrix.append(col)
-// print(matrix)
