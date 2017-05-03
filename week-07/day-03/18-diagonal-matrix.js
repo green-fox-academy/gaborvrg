@@ -12,15 +12,18 @@
 // * size should depend on a variable
 // ** Relax, a matrix is just like an array
 
-var sizeOfMatrix = 8;
+var sizeOfMatrix = 5;
 var matrix = [];
 
 for (var x = 0; x < sizeOfMatrix; x++) {
     for (var y = 0; y < sizeOfMatrix; y++) {
-        matrix[x,y] = '0';
+        if (x === y) {
+            matrix[x,y] = 1;
+        } else {
+            matrix[x,y] = 0;
+        }
     }
-    console.log(matrix);
-    // console.log('0 '.repeat(y));
+    console.log(matrix.join(' '));
 }
 
 
