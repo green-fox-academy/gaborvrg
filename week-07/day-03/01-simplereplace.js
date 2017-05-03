@@ -6,5 +6,9 @@ var example = "In a dishwasher far far away";
 // Please fix it for me!
 // Expected ouput: In a galaxy far far away
 
-console.log(example.replace('dishwasher', 'galaxy'));
+function replace(str) {
+    return str.replace('dishwasher', 'galaxy')
+}
+
+console.log(replace(example));
 
