@@ -12,12 +12,12 @@
 // * size should depend on a variable
 // ** Relax, a matrix is just like an array
 
-var sizeOfMatrix = 5;
+var sizeOfMatrix = 8;
 var matrix = [];
 
 for (var x = 0; x < sizeOfMatrix; x++) {
     for (var y = 0; y < sizeOfMatrix; y++) {
-        if (x === y) {
+        if (x === sizeOfMatrix - y -1) {
             matrix[x,y] = 1;
         } else {
             matrix[x,y] = 0;
