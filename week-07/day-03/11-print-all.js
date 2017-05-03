@@ -11,8 +11,9 @@ for (var i = 0; i < af.length; i++) {
 }
 
 console.log('\n');
-// function version
 
-af.forEach(function(element) {
+// forEach function version
+
+af.forEach(function(element, i, array) {
   console.log(element);
 });
