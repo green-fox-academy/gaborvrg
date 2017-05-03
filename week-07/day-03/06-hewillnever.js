@@ -17,9 +17,20 @@ var hashmap = {
     3: "say goodbye "
 };
 
+// notSoCrypticMessage.forEach(function(element) {
+//   out += hashmap[element];
+// });
+// console.log(out)
 
-notSoCrypticMessage.forEach(function(element, i, array) {
-  out += hashmap[element];
-});
 
-console.log(out)
+// with function
+
+function decrypt(str) {
+    str.forEach(function(element) {
+        out += hashmap[element];
+    });
+    return out
+}
+
+console.log(decrypt(notSoCrypticMessage));
+
