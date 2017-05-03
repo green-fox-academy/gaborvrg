@@ -10,7 +10,7 @@
 //  % % % %
 //
 
-var lineCount = 6
+var lineCount = 8
 
 // old version
 
