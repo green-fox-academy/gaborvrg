@@ -10,3 +10,9 @@ for (var i = 0; i < af.length; i++) {
     console.log(af[i]);
 }
 
+console.log('\n');
+// function version
+
+af.forEach(function(element) {
+  console.log(element);
+});
