@@ -17,7 +17,7 @@
   <p class="apple">apple</p>
   <p class="balloon">balloon</p>
   <p class="cat">cat</p>
-  <p>dolphin</p>
+  <p class="dolphin">dolphin</p>
 
   <!-- You can work in the html or in a separate js file. Like:
   <script>
@@ -39,6 +39,12 @@
   if (document.querySelector('.cat')) {
     alert('YEAH CAT!')
   } 
+
+  console.log(document.querySelectorAll('p')[3].className);
+  if (document.querySelectorAll('p')[3].className === 'dolphin') {
+    // console.log(document.querySelector('.apple').textContent);
+    document.querySelector('.apple').textContent = 'pear';
+  }
 
   </script>
 
