@@ -15,6 +15,7 @@
   <script>
     Write the image's url to the console.
     Replace the image with a picture of yourself.
+
     Make the link point to the Green Fox Academy website.
     Disable the second button.
     Replace its text with 'Don't click me!'.
@@ -27,6 +28,11 @@
   var imgUrl = document.querySelector('img');
   console.log(imgUrl.getAttribute('src'));
   imgUrl.setAttribute('src', 'me.png');
+
+  var originalLink = document.querySelector('a')
+  originalLink.setAttribute('href', 'https://www.greenfoxacademy.com');
+
+  
 
   </script>
 
