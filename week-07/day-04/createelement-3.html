@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Workshop: CreateElement</title>
+</head>
+<body>
+  <ul class="asteroids">
+    <li>The King</li>
+  </ul>
+
+  <!-- You can work in the html or in a separate js file. Like:
+  <script>
+    Remove the king from the list.
+    Add list items that have the following text contents:
+    ['apple', 'bubble', 'cat', 'green fox']
+  </script>
+  OR
+  <script src="createelement-3.js"></script> -->
+
+  <script>
+    
+    var ulList = document.querySelector('.asteroids');
+    var king = document.querySelector('li');
+    ulList.removeChild(king);
+
+    var list = ['apple', 'bubble', 'cat', 'green fox'];
+
+    list.forEach(function(elem, idx) {
+      ulList.appendChild(document.createElement('li')).textContent = elem;
+    });
+
+  </script>
+
+</body>
+</html>
