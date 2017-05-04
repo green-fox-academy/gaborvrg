@@ -34,8 +34,15 @@
 
     function turnParty () {
       
-      document.querySelector('body').classList.add('party');
-      console.log(document.querySelector('body').classList);
+      // document.querySelector('body').classList.add('party');
+      // console.log(document.querySelector('body').classList.value);
+      var klikk =  document.querySelector('body').classList
+
+      if (klikk.value === 'party') {
+        klikk.remove('party')
+      } else {
+        klikk.add('party')
+      }
 
     }
 
