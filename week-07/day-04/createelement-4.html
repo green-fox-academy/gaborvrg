@@ -54,24 +54,17 @@
     ulList.removeChild(king);
 
     planetData.forEach(function(elem) {
-      
+      if (elem['asteroid']) {
+        var newAsteroid = document.createElement('li');
+        newAsteroid.className = elem['category'];
+        newAsteroid.textContent = elem['content'];
+        ulList.appendChild(newAsteroid);
+        console.log(newAsteroid);
+
+      }
     });
 
-
-
   </script>
-
-
-
 </body>
 </html>
-
-
-
-
-
-
-
-
-
 
