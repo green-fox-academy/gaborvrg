@@ -28,12 +28,12 @@
   asteroidList.appendChild(document.createElement('li')).textContent = 'The Green Fox';
   asteroidList.appendChild(document.createElement('li')).textContent = 'The Lamplighter';
 
-  var newHeading = document.querySelector('body');
+  var newHeading = document.querySelector('.container');
   newHeading.appendChild(document.createElement('h1')).textContent = 'I can add elements to the DOM!';
-  console.log(newHeading);
-  
 
-  console.log(asteroidList);
+  newHeading.appendChild(document.createElement('img')).setAttribute('src', 'https://farm4.staticflickr.com/3753/32764893633_362431a936_k.jpg');
+
+
 
   </script>
 
