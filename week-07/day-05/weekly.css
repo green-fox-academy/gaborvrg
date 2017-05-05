@@ -1,0 +1,48 @@
+.container {
+
+}
+
+img {
+  display: flex;
+  margin: 50px auto 0px;
+  width: 720px;
+}
+
+.wrapper-nav {
+  display: flex;
+  justify-content: center;
+}
+
+.main-nav {
+  display: flex;
+  margin: auto 0px;
+  width: auto;
+  height: auto;
+  background: #fff;
+  padding-left: 0px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.item {
+  background: #999;
+  list-style: none;
+  min-width: 100px;
+  height: 100px;
+  margin: 7px 10px;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.5s ease-in-out;
+  -moz-transition: opacity 0.5s ease-in-out;
+  -o-transition: opacity 0.5s ease-in-out;
+
+}
+
+.item:hover {
+    position:relative;
+    transform: scale(1.05);
+    opacity: 1;
+}
+
+/*    transform: scale(1.5, 1.5);*/
