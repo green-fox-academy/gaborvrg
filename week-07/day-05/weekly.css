@@ -1,5 +1,5 @@
-.container {
-
+body {
+  background-color: #eee;
 }
 
 img {
@@ -32,7 +32,11 @@ img {
   min-width: 100px;
   height: 100px;
   margin: 7px 10px;
-  opacity: 0.7;
+  opacity: 0.2;
+  background-image: url("img/pic6.jpg");
+  background-size:     cover;                      /* <------ */
+  background-repeat:   no-repeat;
+  background-position: center center;     
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
