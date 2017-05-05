@@ -2,11 +2,21 @@ body {
   background-color: #eee;
 }
 
+.container {
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 0px;
+}
+
 img {
   display: flex;
-  margin: 50px auto 0px;
+  margin: 40px auto 0px;
   width: 720px;
+  border-radius: 1%;
 }
+
 
 .wrapper-nav {
   display: flex;
@@ -18,7 +28,7 @@ img {
   margin: auto 0px;
   width: auto;
   height: auto;
-  background: #fff;
+  background: #eee;
   padding-left: 0px;
   align-items: center;
   justify-content: center;
@@ -31,8 +41,9 @@ img {
   list-style: none;
   min-width: 100px;
   height: 100px;
-  margin: 7px 10px;
-  opacity: 0.2;
+  margin: 7px 12px;
+  opacity: 0.4;
+  border-radius: 5%;
   background-image: url("img/pic1.jpg");
   background-size:     cover;
   background-repeat:   no-repeat;
@@ -40,7 +51,6 @@ img {
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
   -o-transition: opacity 0.5s ease-in-out;
-
 }
 
 .item:hover {
@@ -48,5 +58,3 @@ img {
     transform: scale(1.05);
     opacity: 1;
 }
-
-/*    transform: scale(1.5, 1.5);*/
