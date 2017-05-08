@@ -1,0 +1,15 @@
+{
+  "name": "dojo",
+  "version": "1.0.0",
+  "description": "Dojo work",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "gaborvrg",
+  "license": "ISC",
+  "dependencies": {
+    "tape": "^4.6.3"
+  }
+}
+
