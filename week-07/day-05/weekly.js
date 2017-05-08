@@ -1,10 +1,11 @@
 'use strict';
 
-var clickList = document.querySelectorAll('.thumb'); 
+var clickList = document.querySelectorAll('.thumb'); //
 var leftButton = document.querySelector('.left');
 var rightButton = document.querySelector('.right');
-var imageIndex = Math.floor(Math.random() * imageList.length + 1);
-console.log(imageIndex);
+var imageIndex = Math.floor(Math.random() * imageList.length); // a fokep randomizalasa
+
+// a fokep beallitasa
 var mainImage = document.querySelector('.mainImage');
 mainImage.setAttribute('src', imageList[imageIndex].url);
 
@@ -15,7 +16,7 @@ function slideRight() {
 
         mainImage.setAttribute('src', imageList[imageIndex].url);
     // }
-    if (imageIndex === imageList.length - 1) {
+    if (imageIndex === imageList.length - 1) { //az adatbazis vegere eres eseten kezdi elolrol
         imageIndex = 0;
     };
 };
@@ -28,7 +29,7 @@ function slideLeft() {
 
         mainImage.setAttribute('src', imageList[imageIndex].url);
     // }
-    if (imageIndex === 0) {
+    if (imageIndex === 0) { //az adatbazis elejere eres eseten kezdi a vegerol
         imageIndex = imageList.length - 1;
     };
 };
