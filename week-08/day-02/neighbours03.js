@@ -8,19 +8,19 @@ const isIll = true;
 function getDeputy(hour) {
   while (isIll) {
     if (hour === 8) {
-      let deputy = 'Bela bacsi';
-      isIll = false;
+      var deputy = 'Bela bacsi';
+      let isIll = false;
     }
     else if (hour === 9) {
-      let deputy = 'Bujaki';
-      isIll = false;
+      var deputy = 'Bujaki';
+      let isIll = false;
     }
     else if (hour === 10) {
-      let deputy = 'Vilma';
-      isIll = false;
+      var deputy = 'Vilma';
+      let isIll = false;
     }
-  }
   return deputy;
+  }
 }
 
 console.log("At eight:", getDeputy(8));
