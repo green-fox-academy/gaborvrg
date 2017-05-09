@@ -25,3 +25,8 @@ var redSharpie = new Sharpie('red', 10);
 console.log(redSharpie.color);
 console.log(redSharpie.width);
 console.log(redSharpie.use());
+
+var oreangeSharpie = new Sharpie('reoranged', 20);
+console.log(oreangeSharpie.color);
+console.log(oreangeSharpie.width);
+console.log(oreangeSharpie.use());
