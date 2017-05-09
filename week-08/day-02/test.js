@@ -1,12 +1,15 @@
-function f() {
-  return this.a;
+var funcs = [];
+
+function createfunc(i) {
+    return function() { console.log("My value: " + i); };
 }
 
-var g = f.bind({a: 'azerty'});
-console.log(g()); // azerty
+for (var i = 0; i < 3; i++) {
+    funcs[i] = createfunc(i);
+}
 
-var h = g.bind({a: 'yoo'}); // bind only works once!
-console.log(h()); // azerty
+console.log(funcs);
 
-var boundF = f.bind("foo");
-boundF("hello", "world");
+// for (var j = 0; j < 3; j++) {
+//     funcs[j]();                        // and now let's run each one to see
+// }
