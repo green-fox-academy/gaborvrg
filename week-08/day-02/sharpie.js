@@ -10,7 +10,7 @@ function Sharpie(color, width) {
     this.color = color;
     this.width = width;
     this.inkAmount = 100.0;
-    this.use = function (amount) {
+    this.use = function () {
         return this.inkAmount - this.width;
     };
 }
@@ -26,7 +26,7 @@ console.log(redSharpie.color);
 console.log(redSharpie.width);
 console.log(redSharpie.use());
 
-var oreangeSharpie = new Sharpie('reoranged', 20);
+var oreangeSharpie = new Sharpie('orange', 20);
 console.log(oreangeSharpie.color);
 console.log(oreangeSharpie.width);
 console.log(oreangeSharpie.use());
