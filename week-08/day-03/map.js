@@ -14,7 +14,21 @@ var fruits = [
 // Please use the map method.
 
 var newArray = fruits.map(function(x) {
-    console.log(x.split("e").length - 1);
+    return x.split("e").length - 1;
 });
 
+console.log(newArray);
+
+
+
+
+
+
+
+
+
+
+// var newArray2 = fruits.filter("e"){
+
+// }
 
