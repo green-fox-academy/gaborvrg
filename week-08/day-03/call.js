@@ -16,4 +16,3 @@ factorialTillLimitWithCallback(20, smthng);
 
 // Create a function and pass it as a parameter to the factorialTillLimitWithCallback
 // function, and print all the factorial numbers till 20
-
