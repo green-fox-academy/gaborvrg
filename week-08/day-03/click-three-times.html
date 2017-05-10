@@ -1,6 +1,6 @@
-<!-- Delayed Click
+<!-- Click Three Times
 
-Create a simple HTML document with one button. If the user clicks the button it should wait 2 seconds and it should show a text under the button: 2 seconds ellapsed -->
+Create a simple HTML document with one button. If the user clicks the button 3 times, and 5 seconds is already ellapsed since the page is loaded, a text should apper under the button: 5 seconds ellapsed and clicked 3 times -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,27 +36,26 @@ Create a simple HTML document with one button. If the user clicks the button it 
 <body>
   <div class="main">
     <div class="button">Button</div>
-    <div class="text">2 seconds ellapsed</div>
+    <div class="text">5 seconds ellapsed and clicked 3 times</div>
   </div>
 
   <script>
     var button = document.querySelector('.button');
     var hiddenText = document.querySelector('.text');
+    var clickNumber = 0;
 
     button.addEventListener('click', function() {
-      button.style.boxShadow = "2px 2px 2px black";
-      setTimeout(function() {
-        hiddenText.style.zIndex = "0"; 
-        button.style.boxShadow = "5px 5px 5px black";
-      }, 2000);
+      clickNumber += 1;
+      console.log(clickNumber);
+      if (clickNumber === 3) {
+        button.style.boxShadow = "2px 2px 2px black";
+        setTimeout(function() {
+          hiddenText.style.zIndex = "0"; 
+          button.style.boxShadow = "5px 5px 5px black";
+        }, 5000);
+      }
     });
+
   </script>
 </body>
 </html>
-
-
-
-
-
-
-
