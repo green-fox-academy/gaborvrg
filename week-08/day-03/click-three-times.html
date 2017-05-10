@@ -43,19 +43,45 @@ Create a simple HTML document with one button. If the user clicks the button 3 t
     var button = document.querySelector('.button');
     var hiddenText = document.querySelector('.text');
     var clickNumber = 0;
+    var timeOver = false;
 
     button.addEventListener('click', function() {
       clickNumber += 1;
       console.log(clickNumber);
-      if (clickNumber === 3) {
-        button.style.boxShadow = "2px 2px 2px black";
-        setTimeout(function() {
-          hiddenText.style.zIndex = "0"; 
-          button.style.boxShadow = "5px 5px 5px black";
-        }, 5000);
+      if (clickNumber >= 3 && timeOver === true) {
+        hiddenText.style.zIndex = "0";
       }
     });
+
+    setTimeout(function() {
+      timeOver = true;
+      if (clickNumber >= 3 && timeOver === true) {
+        hiddenText.style.zIndex = "0";
+      }
+    }, 5000);
+
+
 
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+<!-- 
+    function showText(callback) {
+      setTimeout(function() {
+        hiddenText.style.zIndex = "0";
+      }, 5000);
+      if (clickNumber === 3) {
+        callback();
+      } -->
+
+
