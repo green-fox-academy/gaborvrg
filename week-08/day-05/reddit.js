@@ -46,6 +46,11 @@ load(url, function(datas){
         // console.log(e.target);
         score.textContent = elem.score + 1;
       });
+
+      clone.querySelector('.downvote').addEventListener('click', function(e) {
+        // console.log(e.target);
+        score.textContent = elem.score - 1;
+      });
       main.appendChild(clone);
 
       owner(elem.owner);
