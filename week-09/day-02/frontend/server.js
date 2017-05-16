@@ -42,6 +42,9 @@ app.get('/greeter', function (req, res) {
     }
 });
 
+app.get('/appenda', function(req, res) {
+    console.log(req.originalUrl); 
+});
 
 
 
