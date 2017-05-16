@@ -42,8 +42,12 @@ app.get('/greeter', function (req, res) {
     }
 });
 
-app.get('/appenda', function(req, res) {
-    console.log(req.originalUrl); 
+app.get('/appenda/:id', function(req, res) {
+    if (req.params.id + 'a' === 'kutya') {
+        res.send({
+                  "appended": "kutya"
+                });
+    }
 });
 
 
