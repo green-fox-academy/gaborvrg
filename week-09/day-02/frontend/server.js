@@ -51,7 +51,18 @@ app.get('/appenda/:id', function(req, res) {
 });
 
 app.post('/dountil/:what', function (req, res) {
-    res.send('Got a POST request')
+    if (req.query.until === {} || req.query.until === undefined) {
+        res.send({
+          "error": "Please provide a number!"
+        });
+    // } else if (req.params.what === "sum" && req.query.until === 7) {
+    //     res.send({
+    //         'result': until * 3
+    //         // valami: 'alakul'
+    //             });
+    }
+
+    // res.send("Something");
 });
 
 
