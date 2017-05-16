@@ -16,12 +16,12 @@ app.get('/', function (req, res) {  //endpoint - a get kereshez
     });
 });
 
-app.get('/five', function(req, res) {
-    // res.send(five.klingon());
-    var lang = req.query.lang || 'klingon';
-    var fiveFunct = five[lang];
-    res.send(fiveFunct());
-});
+// app.get('/five', function(req, res) {
+//     // res.send(five.klingon());
+//     var lang = req.query.lang || 'klingon';
+//     var fiveFunct = five[lang];
+//     res.send(fiveFunct());
+// });
 
 app.get('/five/:lang', function(req, res) { // masik megkozelites
     // res.send(five.klingon());
