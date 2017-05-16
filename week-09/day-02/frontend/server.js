@@ -50,6 +50,11 @@ app.get('/appenda/:id', function(req, res) {
     }
 });
 
+app.post('/dountil/:what', function (req, res) {
+    res.send('Got a POST request')
+});
+
+
 
 
 // app.listen(8080);
