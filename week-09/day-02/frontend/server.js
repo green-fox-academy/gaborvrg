@@ -1,8 +1,11 @@
 'use strict';
 
 var express = require('express');
+var bodyParser = require('body-parser')
 
 var app = express();
+
+app.use(bodyParser.json());
 
 app.get('/', function(req, resp) {
     resp.sendFile(__dirname + '/index.html');
@@ -51,22 +54,15 @@ app.get('/appenda/:id', function(req, res) {
 });
 
 app.post('/dountil/:what', function (req, res) {
-    if (req.query.until === {} || req.query.until === undefined) {
-        res.send({
-          "error": "Please provide a number!"
-        });
-    // } else if (req.params.what === "sum" && req.query.until === 7) {
+    // if (req.query.until === {} || req.query.until === undefined) {
     //     res.send({
-    //         'result': until * 3
-    //         // valami: 'alakul'
-    //             });
-    }
-
-    // res.send("Something");
+    //       "error": "Please provide a number!"
+    //     }); 
+    // }
+    console.log(req.body);
 });
 
-
-
+// app.use(bodyParser.json(req.body));
 
 // app.listen(8080);
 app.listen(8080, function() {
