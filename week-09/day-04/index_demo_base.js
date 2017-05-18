@@ -10,7 +10,10 @@ const filter = 'Thomas Morgan';
 const querys = `SELECT book_mast.book_name ,author.aut_name, category.cate_descrip, publisher.pub_name, book_mast.book_price FROM book_mast
                 INNER JOIN author ON book_mast.aut_id=author.aut_id
                 INNER JOIN category ON book_mast.cate_id=category.cate_id
-                INNER JOIN publisher ON book_mast.pub_id=publisher.pub_id WHERE `+ what + ` = ?; `; // [what, filter]
+                INNER JOIN publisher ON book_mast.pub_id=publisher.pub_id WHERE `+ what + ` = ` + filter + `; `; // [what, filter]
+
+// const querys = 'SELECT book_mast.book_name, author.aut_name, category.cate_descrip, publisher.pub_name, book_mast.book_price FROM book_mast INNER JOIN author ON book_mast.aut_id=author.aut_id INNER JOIN category ON book_mast.cate_id=category.cate_id INNER JOIN publisher ON book_mast.pub_id=publisher.pub_id WHERE ' + what + ' = ' + "\'" + filter + "\'"; // [what, filter]
+
 
 // mi lenne, ha az osszes lehetosegre ra lehetne keresni kulon ertekek megadasaval,legordulo menuben, *-gal a SELECT utan
 
@@ -24,7 +27,7 @@ var conn = mysql.createConnection({
 
 
 app.get('/', function get(req, res) {
-    conn.query( querys ,[filter],function(err, rows) {
+    conn.query( querys ,function(err, rows) {
     console.log(rows);
     res.send(drawing(rows));
     });

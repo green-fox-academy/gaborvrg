@@ -4,13 +4,13 @@ const mysql = require("mysql");
 const express = require('express');
 const app = express();
 
-const what = 'aut_name';
-const filter = 'Thomas Morgan';
+// const what = 'aut_name';
+// const filter = 'Thomas Morgan';
 
 const querys = `SELECT book_mast.book_name ,author.aut_name, category.cate_descrip, publisher.pub_name, book_mast.book_price FROM book_mast
                 INNER JOIN author ON book_mast.aut_id=author.aut_id
                 INNER JOIN category ON book_mast.cate_id=category.cate_id
-                INNER JOIN publisher ON book_mast.pub_id=publisher.pub_id WHERE `+ what + ` = ?; `; // [what, filter]
+                INNER JOIN publisher ON book_mast.pub_id=publisher.pub_id`; // [what, filter]
 
 // mi lenne, ha az osszes lehetosegre ra lehetne keresni kulon ertekek megadasaval,legordulo menuben, *-gal a SELECT utan
 
@@ -24,7 +24,7 @@ var conn = mysql.createConnection({
 
 
 app.get('/', function get(req, res) {
-    conn.query( querys ,[filter],function(err, rows) {
+    conn.query( querys, function(err, rows) {
     console.log(rows);
     res.send(drawing(rows));
     });
@@ -36,17 +36,25 @@ app.get('/', function get(req, res) {
 // conn.query(query, [country, city], function(err,rows){
 // WHERE category.cate_descrip='Science'
 
-// app.get('/book', function(req, res) {
-//     console.log(req.query);
-//     conn.query( querys, [filter] ,function(err, rows) {
-//     res.send(drawing(rows));
-//     });
-//     // if (req.query === 'Science') {
-//     //     conn.query( querys, [what, filter] ,function(err, rows) {
-//     //     res.send(drawing(rows));
-//     //     });
-//     // }
-// });
+//Object.keys(obj)
+
+app.get('/book', function(req, res) {
+    console.log(Object.keys(req.query));
+    res.send(req.query);
+
+    // if (req.query === 'Science') {}
+
+
+    // conn.query( querys, function(err, rows) {
+    // res.send(drawing(rows));
+    // });
+
+    // if (req.query === 'Science') {
+    //     conn.query( querys, function(err, rows) {
+    //     res.send(drawing(rows));
+    //     });
+    // }
+});
 
 
 
