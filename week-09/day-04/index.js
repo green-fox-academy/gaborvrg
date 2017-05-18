@@ -4,15 +4,10 @@ const mysql = require("mysql");
 const express = require('express');
 const app = express();
 
-// const what = 'aut_name';
-// const filter = 'Thomas Morgan';
-
 const querys = `SELECT book_mast.book_name ,author.aut_name, category.cate_descrip, publisher.pub_name, book_mast.book_price FROM book_mast
                 INNER JOIN author ON book_mast.aut_id=author.aut_id
                 INNER JOIN category ON book_mast.cate_id=category.cate_id
                 INNER JOIN publisher ON book_mast.pub_id=publisher.pub_id`; // [what, filter]
-
-// mi lenne, ha az osszes lehetosegre ra lehetne keresni kulon ertekek megadasaval,legordulo menuben, *-gal a SELECT utan
 
 
 var conn = mysql.createConnection({
@@ -30,32 +25,21 @@ app.get('/', function get(req, res) {
     });
 });
 
-// /books?category=Science
-// http://127.0.0.1:3000/book?category=Science
-// const query = "SELECT * FROM author WHERE country = ? AND home_city = ?"
-// conn.query(query, [country, city], function(err,rows){
-// WHERE category.cate_descrip='Science'
-
-//Object.keys(obj)
 
 app.get('/book', function(req, res) {
-    console.log(Object.keys(req.query));
-    res.send(req.query);
+    var whereWhere = Object.keys(req.query).join();
+    var whereWhat = req.query[whereWhere];
 
-    // if (req.query === 'Science') {}
-
-
-    // conn.query( querys, function(err, rows) {
-    // res.send(drawing(rows));
-    // });
-
-    // if (req.query === 'Science') {
-    //     conn.query( querys, function(err, rows) {
-    //     res.send(drawing(rows));
-    //     });
-    // }
+    if (whereWhere === 'category') {
+        conn.query(querys + " WHERE cate_descrip = \'" + whereWhat + "\'" , function(err, rows) {
+        res.send(drawing(rows));
+        });        
+    } else if (whereWhere === 'publisher') {
+        conn.query(querys + " WHERE pub_name = \'" + whereWhat + "\'" , function(err, rows) {
+        res.send(drawing(rows));
+        });        
+    }
 });
-
 
 
 function drawing(rows) {
