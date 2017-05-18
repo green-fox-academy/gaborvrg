@@ -1,4 +1,4 @@
-'use strict'
+'use strict';
 
 const mysql = require("mysql");
 const express = require('express');
@@ -34,8 +34,20 @@ app.get('/book', function(req, res) {
         conn.query(querys + " WHERE cate_descrip = \'" + whereWhat + "\'" , function(err, rows) {
         res.send(drawing(rows));
         });        
-    } else if (whereWhere === 'publisher') {
+    } 
+
+    if (whereWhere === 'publisher') {
         conn.query(querys + " WHERE pub_name = \'" + whereWhat + "\'" , function(err, rows) {
+        res.send(drawing(rows));
+        });        
+    } 
+    if (whereWhere === 'plt') {
+        conn.query(querys + " WHERE book_price < \'" + whereWhat + "\'" , function(err, rows) {
+        res.send(drawing(rows));
+        });        
+    } 
+    if (whereWhere === 'pgt') {
+        conn.query(querys + " WHERE book_price > \'" + whereWhat + "\'" , function(err, rows) {
         res.send(drawing(rows));
         });        
     }
