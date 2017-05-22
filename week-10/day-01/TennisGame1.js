@@ -19,7 +19,6 @@ TennisGame1.prototype.wonPoint = function(playerName) {
 };
 
 TennisGame1.prototype.getEqualScore = function () {
-    
     switch (this.m_score1) {
             case 0:
                 this.score = "Love-All";
@@ -36,24 +35,16 @@ TennisGame1.prototype.getEqualScore = function () {
         }
 };
 
-TennisGame1.prototype.getScore = function() {
-    if (this.m_score1 === this.m_score2) {
-        this.getEqualScore();
-    } else if (this.m_score1 >= 4 || this.m_score2 >= 4) {
-        let minusResult = this.m_score1 - this.m_score2;
-        if (minusResult === 1) this.score = "Advantage player1";
-        else if (minusResult === -1) this.score = "Advantage player2";
-        else if (minusResult >= 2) this.score = "Win for player1";
-        else this.score = "Win for player2";
+TennisGame1.prototype.getAdvantageOrWinScore = function () {
+    let minusResult = this.m_score1 - this.m_score2;
+    if (minusResult === 1) this.score = "Advantage player1";
+    else if (minusResult === -1) this.score = "Advantage player2";
+    else if (minusResult >= 2) this.score = "Win for player1";
+    else this.score = "Win for player2";
+};
 
-    } else {
-        for (let i = 1; i < 3; i++) {
-            if (i === 1) this.tempScore = this.m_score1;
-            else {
-                this.score += "-";
-                this.tempScore = this.m_score2;
-            }
-            switch (this.tempScore) {
+TennisGame1.prototype.getScoreDuringGame = function() {
+    switch (this.tempScore) {
                 case 0:
                     this.score += "Love";
                     break;
@@ -67,6 +58,22 @@ TennisGame1.prototype.getScore = function() {
                     this.score += "Forty";
                     break;
             }
+};
+
+
+TennisGame1.prototype.getScore = function() {
+    if (this.m_score1 === this.m_score2) {
+        this.getEqualScore();
+    } else if (this.m_score1 >= 4 || this.m_score2 >= 4) {
+        this.getAdvantageOrWinScore();
+    } else {
+        for (let i = 1; i < 3; i++) {
+            if (i === 1) this.tempScore = this.m_score1;
+            else {
+                this.score += "-";
+                this.tempScore = this.m_score2;
+            }
+        this.getScoreDuringGame();
         }
     }
     return this.score;
