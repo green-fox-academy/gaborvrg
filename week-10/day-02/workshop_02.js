@@ -19,7 +19,6 @@ square.getArea();
 square.getCircumference();
 
 var smallrectangle = new Rectangles(10,20);
-
 smallrectangle.getArea();
 smallrectangle.getCircumference();
 
