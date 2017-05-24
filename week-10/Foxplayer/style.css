@@ -7,7 +7,6 @@ body {
 #wrapper {
   display: flex;
   flex-direction: column;
-  /*max-width: 1000px;*/
   background: grey;
   border-radius: 5px;
   box-shadow: 0px 2px 5px 1px rgba(0,0,0,0.5);
@@ -21,8 +20,8 @@ body {
   align-items: center;
   flex-wrap: wrap;
   border-radius: 5px 5px 0 0;
-
 }
+
 
 .panel {
   flex-grow: 1;
@@ -31,24 +30,61 @@ body {
   background: #F5F5F5;
 }
 
+
 .left {
   border-right: 2px solid #d5d5d5;
+  display: flex;
+  flex-direction: column;
 }
 
+.leftup {
+  display: flex;
+  justify-content: space-between;
+}
+
+.leftup p {
+  text-align: center;
+  /*padding: 20px 0px;*/
+}
+
+.leftupleft {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 8px;
+}
+
+.leftupright {
+  display: flex;
+}
+
+.leftupright img {
+  width: 140px;
+  height: 140px;
+}
+
+.leftdown {
+  flex-grow: 1;
+}
+
+
+
 .controlpanel {
-  flex: 1 1 80px;
+  flex: 1 1 60px;
   border-radius: 0 0 5px 5px;
   background: #fff;
   display: flex;
 }
 
 .control {
-  border: 1px solid grey;
-  margin: 3px;
+  flex: 0 1 100px;
+  display: flex;
+  justify-content: center;
 }
 
-.playback {
-  flex: 0 1 120px;
+.control img {
+  max-width: 25px;
+  padding: 0px 5px;
 }
 
 .seekbar {
@@ -59,49 +95,47 @@ body {
 }
 
 .volume {
-  flex: 0 1 120px;
+  flex: 0 1 140px;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+}
+
+.rightup {
+  flex: 0 1 70px;
+  border-bottom: 2px solid #d5d5d5;
+}
+
+.rightdown {
+  flex: 1 1 auto;
+}
+
+audio {
+  width: 100%;
 }
 
 audio::-webkit-media-controls-panel {
-  background: #fff;
+  background: transparent;
 }
 
+audio::-webkit-media-controls-volume-slider,
+audio::-webkit-media-controls-time-remaining-display,
 audio::-webkit-media-controls-play-button {
   display: none;
 }
 
-audio::-webkit-media-controls-timeline {
-  background: #3CC7D1;
-  height: 5px;
-  border-radius: 10px;
-  /*margin-left: 25px;*/
+
+
+/*minden masodik div szinezes*/
+/*div.container > div:nth-of-type(odd) {
+    background: #e0e0e0;
 }
-
-audio::-webkit-media-controls-time-remaining-display,
-audio::-webkit-media-controls-current-time-display {
-  background: red;
-  color: grey;
-  font-weight: bold;
-}
-
-
-
-/*audio::-webkit-media-controls-panel
-audio::-webkit-media-controls-mute-button
-audio::-webkit-media-controls-play-button
-audio::-webkit-media-controls-timeline-container
-audio::-webkit-media-controls-current-time-display
-audio::-webkit-media-controls-time-remaining-display
-audio::-webkit-media-controls-timeline
-audio::-webkit-media-controls-volume-slider-container
-audio::-webkit-media-controls-volume-slider
-audio::-webkit-media-controls-seek-back-button
-audio::-webkit-media-controls-seek-forward-button
-audio::-webkit-media-controls-fullscreen-button
-audio::-webkit-media-controls-rewind-button
-audio::-webkit-media-controls-return-to-realtime-button
-audio::-webkit-media-controls-toggle-closed-captions-button
 */
+
+
+
 
 
 

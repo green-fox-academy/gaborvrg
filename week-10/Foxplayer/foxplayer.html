@@ -10,16 +10,40 @@
 <body>
   <div id="wrapper">
     <div class="main">
-      <div class="left panel"></div>
-      <div class="right panel"></div>
+      <div class="left panel">
+        <div class="leftup">
+          <div class="leftupleft">
+            <img src="img/foxplayer.png" alt="Foxplayer picture">
+            <p>Playlists</p>
+          </div>
+          <div class="leftupright">
+            <img src="img/placeholder.png" alt="Albumcover"> 
+          </div>
+        </div>
+        <div class="leftdown"></div>
+      </div>
+      <div class="right panel">
+        <div class="rightup"></div>
+        <div class="rightdown"></div>
+      </div>
     </div>
     <div class="controlpanel">
-      <div class="control playback"></div>
-      <div class="control seekbar">
-        <!-- <audio src="music/Purple_Drift.mp3" controls></audio> -->
+      <div class="control">
+        <img src="img/rewind.svg" alt="rewind">
+        <img src="img/play.svg" alt="play">
+        <img src="img/forward.svg" alt="">
       </div>
-      <div class="control volume"></div>
+      <div class="seekbar">
+        <audio src="music/Purple_Drift.mp3" controls></audio>
+      </div>
+      <div class="volume">
+        <!-- <input type="range" step="any" max="1" pseudo="-webkit-media-controls-volume-slider" style=" vertical-align: middle;"> -->
+      </div>
     </div>
   </div>
+  <script src="foxplayer.js"></script>
 </body>
 </html>
+
+
+
