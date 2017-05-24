@@ -122,10 +122,15 @@ audio::-webkit-media-controls-panel {
 
 audio::-webkit-media-controls-volume-slider,
 audio::-webkit-media-controls-time-remaining-display,
-audio::-webkit-media-controls-play-button {
+/*audio::-webkit-media-controls-play-button*/ {
   display: none;
 }
 
+audio::-webkit-media-controls-timeline {
+  background: #3CC7D1;
+  height: 5px;
+  border-radius: 10px;
+}
 
 
 /*minden masodik div szinezes*/
