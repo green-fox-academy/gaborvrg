@@ -1,0 +1,54 @@
+show databases;
+
+CREATE DATABASE db_name;
+USE db_name;
+SELECT DATABASE();
+DROP DATABASE IF EXIST dn_name;
+~~~~~~~~~~~~~~~~~~~
+CREATE TABLE name
+~~~~~~~~~~~~~~~~~~~
+VARCHAR() 
+    NULL
+    NOT NULL
+CHAR - string wiht fixed length
+    NOT NULL DEFAULT 'something'
+
+MEDIUMINT
+    UNSIGNED
+
+ENUM("A","B")
+
+TIMESTEMP - YYYMMDDHHMMSS
+
+FLOAT
+
+INT
+    AUTO_INCREMENT
+
+PRIMARY KEY - 
+
+SHOW TABLES
+
+ATOMIC TABLES
+~~~~~~~~~~~~~~~~~~~~~~~~
+
+INSERT INTO table VALUE
+
+FOREIGN KEY
+
+
+
+
+
+
+
+
+  WHERE Rating.stars > Rating.stars - 1
+
+
+
+SELECT Reviewer.name, Movie.title FROM Reviewer 
+    INNER JOIN Rating ON Reviewer.rID=Rating.rID
+    INNER JOIN Movie ON Movie.mID=Rating.mID 
+    GROUP BY Reviewer.rID HAVING COUNT(Reviewer.rID) = 2
+

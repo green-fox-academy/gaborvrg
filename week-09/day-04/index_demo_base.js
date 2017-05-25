@@ -6,11 +6,16 @@ const app = express();
 
 const what = 'aut_name';
 const filter = 'Thomas Morgan';
+var anything = 'book_mast.book_name, author.aut_name, category.cate_descrip, publisher.pub_name, book_mast.book_price ';
 
-const querys = `SELECT book_mast.book_name ,author.aut_name, category.cate_descrip, publisher.pub_name, book_mast.book_price FROM book_mast
+const querys = `SELECT ` +  anything + ` FROM book_mast
                 INNER JOIN author ON book_mast.aut_id=author.aut_id
                 INNER JOIN category ON book_mast.cate_id=category.cate_id
-                INNER JOIN publisher ON book_mast.pub_id=publisher.pub_id WHERE `+ what + ` = ` + filter + `; `; // [what, filter]
+                INNER JOIN publisher ON book_mast.pub_id=publisher.pub_id WHERE `+ what + ` = ` + "\'" +filter + "\'" + `; `; // [what, filter]
+
+// book_mast.book_name ,author.aut_name, category.cate_descrip, publisher.pub_name, book_mast.book_price 
+
+console.log(querys);
 
 // const querys = 'SELECT book_mast.book_name, author.aut_name, category.cate_descrip, publisher.pub_name, book_mast.book_price FROM book_mast INNER JOIN author ON book_mast.aut_id=author.aut_id INNER JOIN category ON book_mast.cate_id=category.cate_id INNER JOIN publisher ON book_mast.pub_id=publisher.pub_id WHERE ' + what + ' = ' + "\'" + filter + "\'"; // [what, filter]
 

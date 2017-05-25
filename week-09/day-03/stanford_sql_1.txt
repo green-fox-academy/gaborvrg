@@ -1,0 +1,40 @@
+1/Q1
+SELECT Title FROM Movie WHERE director = 'Steven Spielberg' 
+
+
+1/Q2
+SELECT DISTINCT year FROM Movie JOIN Rating ON Movie.mID=Rating.mID WHERE stars >= 4
+
+
+1/Q3
+SELECT title FROM Movie LEFT JOIN Rating ON Movie.mID=Rating.mID WHERE stars is NuLL
+
+1/Q4
+SELECT name FROM Reviewer LEFT JOIN Rating ON Reviewer.rID=Rating.rID WHERE ratingDate is NuLL
+
+1/Q5
+SELECT Reviewer.name AS "Name of reviewer",
+        Movie.title AS "Movie title",
+        Rating.stars AS "Review rate",
+        Rating.ratingDate AS "Date Of Rating" FROM Reviewer 
+INNER JOIN Rating ON Reviewer.rID=Rating.rID
+INNER JOIN Movie ON Movie.mID=Rating.mID 
+ORDER BY Reviewer.name, Movie.title, Rating.stars
+
+
+1/Q6
+SELECT Reviewer.name, Movie.title FROM Reviewer 
+    INNER JOIN Rating ON Reviewer.rID=Rating.rID
+    INNER JOIN Movie ON Movie.mID=Rating.mID 
+    GROUP BY Reviewer.rID HAVING COUNT(Reviewer.rID) = 2
+    LIMIT 1
+
+1/Q7
+SELECT Movie.title, Rating.stars FROM Movie
+    INNER JOIN Rating  ON Rating.mID=Movie.mID    
+    GROUP BY Movie.title
+
+
+1/Q8
+
+

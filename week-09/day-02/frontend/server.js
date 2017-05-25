@@ -62,7 +62,6 @@ app.post('/dountil/:what', function (req, res) {
     console.log(req.body);
 });
 
-// app.use(bodyParser.json(req.body));
 
 // app.listen(8080);
 app.listen(8080, function() {

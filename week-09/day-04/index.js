@@ -4,7 +4,7 @@ const mysql = require("mysql");
 const express = require('express');
 const app = express();
 
-const querys = `SELECT book_mast.book_name ,author.aut_name, category.cate_descrip, publisher.pub_name, book_mast.book_price FROM book_mast
+const querys = `SELECT * FROM book_mast
                 INNER JOIN author ON book_mast.aut_id=author.aut_id
                 INNER JOIN category ON book_mast.cate_id=category.cate_id
                 INNER JOIN publisher ON book_mast.pub_id=publisher.pub_id`; // [what, filter]
@@ -21,6 +21,7 @@ var conn = mysql.createConnection({
 app.get('/', function get(req, res) {
     conn.query( querys, function(err, rows) {
     console.log(rows);
+    // res.send(rows);
     res.send(drawing(rows));
     });
 });
