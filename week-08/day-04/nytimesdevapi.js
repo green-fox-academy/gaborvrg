@@ -8,7 +8,7 @@ function load(url, callback) {
 
   xhr.onreadystatechange = function() {
     if (xhr.readyState === 4) {
-        let responseFromServer = JSON.parse(xhr.response);  // IMPORTANT
+        var responseFromServer = JSON.parse(xhr.response);  // IMPORTANT
         // console.log(responseFromServer.response.docs);
         callback(responseFromServer.response.docs);
     }
@@ -25,7 +25,7 @@ load(url, function(datas) {
     document.querySelector('.content').appendChild(newDl).className = 'section';
 
     datas.forEach(function(elem, idx) {
-        // console.log(elem);
+        console.log(elem);
         // console.log(elem.snippet);
         // console.log(elem.pub_date);
         var newDt = document.createElement('dt');
@@ -36,17 +36,17 @@ load(url, function(datas) {
         var newDd = document.createElement('dd');
         newDd.className = 'snippet';
         newDd.textContent = elem.snippet;
-        document.querySelector('.header' + (idx+1)).appendChild(newDd);
+        document.querySelector('.section').appendChild(newDd);
 
         var newDd2 = document.createElement('dd');
         newDd2.className = 'pub_date';
         newDd2.textContent = elem.pub_date;
-        document.querySelector('.header' + (idx+1)).appendChild(newDd2);
+        document.querySelector('.section').appendChild(newDd2);
 
         var a = document.createElement('a');
         a.textContent = 'Permalink';
         a.href = elem.web_url;
-        document.querySelector('.header' + (idx+1)).appendChild(a);
+        document.querySelector('.section').appendChild(a);
 
     });
 });

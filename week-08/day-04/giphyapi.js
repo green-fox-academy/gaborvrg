@@ -1,5 +1,6 @@
 
 var url = 'http://api.giphy.com/v1/gifs/search?q=funny+cat&api_key=dc6zaTOxFJmzC&limit=16';
+var keyword = document.querySelector('.keyword');
 
 function load(url, callback) {
   var xhr = new XMLHttpRequest();
@@ -24,10 +25,27 @@ load(url, function(datas){
         document.querySelector('.item' + (idx+1)).addEventListener('mouseover', function(e) {
             console.log(elem);
             document.querySelector('.item' + (idx+1)).style.backgroundImage = 'url(\'' + elem.images.downsized.url + '\')';
-        
-            
         });
     });
+});
+
+
+
+function getkeyword(keyword) {
+    var keywordWithSpaces = keyword.replace(/ /g ,'+'); // https://goo.gl/NmuEVs
+    const endpoint = 'http://api.giphy.com/v1/gifs/search?q='+ keywordWithSpaces + '&api_key=dc6zaTOxFJmzC&limit=16';
+    console.log(endpoint);
+    load(endpoint);
+}
+
+
+
+
+keyword.addEventListener('keyup', function(e) {
+    if(e.keyCode == 13) { // Enter key
+        // console.log(keyword.value);
+        getkeyword(keyword.value);
+    }
 });
 
 

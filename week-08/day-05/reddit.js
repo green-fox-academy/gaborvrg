@@ -8,29 +8,12 @@ var upvote = document.querySelector('.upvote');
 var downvote = document.querySelector('.downvote');
 var ownerDiv = document.querySelector('.submit-line');
 var orderbox = document.querySelector('.orderbox');
-var clonesection  = document.querySelector('.section');
 var main = document.querySelector('main');
-
-
-function load(url, callback) {
-  var xhr = new XMLHttpRequest();
-
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState === 4) {
-      let responseFromServer = JSON.parse(xhr.response);  // IMPORTANT
-      // console.log(responseFromServer);
-      callback(responseFromServer);
-    }
-  };
-
-  xhr.open('GET', url, true);
-  xhr.send('');
-}
+var clonesection  = document.querySelector('.section');
 
 load(url, function(datas){
     datas.posts.forEach(function(elem, idx) {
       // console.log(elem);
-
       var clone = clonesection.cloneNode(true);
       var score = clone.querySelector('.score');
       var posttitle = clone.querySelector('.post-title');
@@ -40,7 +23,6 @@ load(url, function(datas){
       newLink.href = elem.href;
       newLink.textContent = elem.title;
       posttitle.appendChild(newLink);
-      // console.log(posttitle);
 
       clone.querySelector('.upvote').addEventListener('click', function(e) {
         // console.log(e.target);
@@ -68,6 +50,18 @@ function order(number) {
   orderbox.textContent = number;
 }
 
+function load(url, callback) {
+  var xhr = new XMLHttpRequest();
+
+  xhr.onreadystatechange = function() {
+    if (xhr.readyState === 4) {
+      let responseFromServer = JSON.parse(xhr.response);  // IMPORTANT
+      callback(responseFromServer);
+    }
+  };
+  xhr.open('GET', url, true);
+  xhr.send('');
+}
 
 
 // upvote.addEventListener('click', function(e) {

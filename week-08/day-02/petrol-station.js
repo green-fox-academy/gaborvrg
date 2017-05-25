@@ -34,7 +34,6 @@ var station = {
 };
 
 
-
 console.log(car.refill(10));
 console.log(car.petrolLevel);
 console.log(station.petrolStorage);

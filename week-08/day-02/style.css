@@ -43,15 +43,15 @@ button {
   flex: 1 1 0%;
   border: 1px solid black;
   margin: 5px;
-  padding:  30px;
+  padding-top:  20px;
 }
 
 
 .level  {
   margin: 0 auto;
-  width: 160px;
+  width: 140px;
   height: 40px;
-  border: 1px solid black;
+  border: 2px solid black;
 }
 
 
