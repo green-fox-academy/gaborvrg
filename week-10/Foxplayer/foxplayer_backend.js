@@ -32,16 +32,14 @@ app.use(express.static('myapp'));
 // });
 
 app.get('/playlists', function get(req, res) {
-  console.log(playlists);
+  // console.log(playlists);
   res.send(playlists);
 });
 
 app.get('/playlist-tracks', function get(req, res) {
-  console.log(tracks);
+  // console.log(tracks);
   res.send(tracks);
 });
-
-
 
 app.use(function (req, res, next) {
   res.status(404).send("Sorry can't find that!");

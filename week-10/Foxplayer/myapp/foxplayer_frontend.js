@@ -23,7 +23,7 @@ load(url + "playlists", function (data) {
   // console.log(data);
   // playlistsRender(data);
   data.forEach(function(elem) {
-      console.log(elem);
+      // console.log(elem);
       var playlistsDiv = document.createElement('div');
       playlistsDiv.className = 'playlist';
       playlistsDiv.textContent = elem.title;
@@ -32,9 +32,9 @@ load(url + "playlists", function (data) {
 });
 
 load(url + "playlist-tracks", function (data) {
-  console.log(data);
+  // console.log(data);
   data.forEach(function(elem) {
-      console.log(elem);
+      // console.log(elem);
       var tracksDiv = document.createElement('div');
       tracksDiv.className = 'tracks';
       tracksDiv.textContent = elem.title + '(' + elem.artist + ')';
