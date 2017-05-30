@@ -34,23 +34,24 @@
   <script src="classlist-1.js"></script> -->
   <script>
     
+  let pList = document.querySelectorAll('p');
+    pList.forEach(function(elem) {
+      if (elem.classList.value === 'cat') {
+        alert('YEAH CAT');
+      }
+    });
 
-    // console.log(document.querySelector('.cat').textContent);
-    if (document.querySelector('.cat')) {
-      alert('YEAH CAT!')
-    } 
-
-    // console.log(document.querySelectorAll('p')[3].className);
+    console.log(document.querySelectorAll('p')[3].className);
     if (document.querySelectorAll('p')[3].className === 'dolphin') {
       document.querySelector('.apple').textContent = 'pear';
     }
 
-    // console.log(document.querySelector('.apple'));
+    console.log(document.querySelector('.apple'));
     if (document.querySelector('.apple').className === 'apple') {
       document.querySelector('.cat').textContent = 'dog';
     }
 
-     // console.log(document.querySelector('.apple'));
+     console.log(document.querySelector('.apple'));
      document.querySelector('.apple').classList.add('red');
 
 

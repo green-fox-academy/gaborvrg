@@ -24,11 +24,11 @@
   <script src="createelement-1.js"></script> -->
   <script>
     
-  var asteroidList = document.querySelector('.asteroids');
-  asteroidList.appendChild(document.createElement('li')).textContent = 'The Green Fox';
-  asteroidList.appendChild(document.createElement('li')).textContent = 'The Lamplighter';
+  let asteroidsList = document.querySelector('.asteroids');
+  asteroidsList.appendChild(document.createElement('li')).textContent = 'The Green Fox';
+  asteroidsList.appendChild(document.createElement('li')).textContent = 'The Lamplighter';
 
-  var newHeading = document.querySelector('.container');
+  let newHeading = document.querySelector('.container');
   newHeading.appendChild(document.createElement('h1')).textContent = 'I can add elements to the DOM!';
 
   newHeading.appendChild(document.createElement('img')).setAttribute('src', 'https://farm4.staticflickr.com/3753/32764893633_362431a936_k.jpg');

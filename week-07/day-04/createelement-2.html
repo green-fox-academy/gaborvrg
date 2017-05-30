@@ -23,9 +23,9 @@
     var king = document.querySelector('li');
     list.removeChild(king);
 
-    for (var i = 0; i < 3; i++) {
-      list.appendChild(document.createElement('li')).textContent = 'The Fox';
-      
+    for (let i = 0; i < 3; i++) {
+      newLiTag = document.createElement('li');
+      list.appendChild(newLiTag).textContent = 'The Fox'; 
     }
 
 

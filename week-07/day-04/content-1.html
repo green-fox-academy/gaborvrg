@@ -19,11 +19,11 @@
     // 5. Replace the last paragraph's content with the first paragraph's content.
 
     // 1
-    var heading = document.getElementsByTagName('h1');
-    alert(heading[0].textContent)
+    var heading = document.querySelector('h1');
+    alert(heading.textContent);
 
     //2
-    var first_par = document.getElementsByTagName('p');
+    var first_par = document.querySelectorAll('p');
     console.log(first_par[0].textContent);
 
     //3
@@ -31,14 +31,8 @@
     alert(second_par.textContent);
 
     //4
-    var newContent = document.getElementsByTagName('h1');
-    newContent[0].innerHTML = 'New Content'
-
-    var newContent2 = document.querySelector('h1');
-    newContent2.innerHTML = '2nd New Content';
-
-    var newContent3 = document.querySelectorAll('h1');
-    newContent3[0].innerHTML = '3nd New Content'
+    var newContent = document.querySelector('h1');
+    newContent.innerHTML = 'New Content';
 
     //5
     var last_par = document.querySelector('.result');

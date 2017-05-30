@@ -19,52 +19,8 @@
   <!-- </script>
   OR
   <script src="createelement-4.js"></script> -->
-
-  <script> 
-    var planetData = [
-      {
-        category: 'inhabited',
-        content: 'Foxes',
-        asteroid: true
-      },
-      {
-        category: 'inhabited',
-        content: 'Whales and Rabbits',
-        asteroid: true
-      },
-      {
-        category: 'uninhabited',
-        content: 'Baobabs and Roses',
-        asteroid: true
-      },
-      {
-        category: 'inhabited',
-        content: 'Giant monsters',
-        asteroid: false
-      },
-      {
-        category: 'inhabited',
-        content: 'Sheep',
-        asteroid: true
-      }
-    ]
-
-    var ulList = document.querySelector('.asteroids');
-    var king = document.querySelector('li');
-    ulList.removeChild(king);
-
-    planetData.forEach(function(elem) {
-      if (elem['asteroid']) {
-        var newAsteroid = document.createElement('li');
-        newAsteroid.className = elem['category'];
-        newAsteroid.textContent = elem['content'];
-        ulList.appendChild(newAsteroid);
-        console.log(newAsteroid);
-
-      }
-    });
-
-  </script>
+  <script src="data.js"></script>
+  <script src="createelement-4.js"></script>
 </body>
 </html>
 

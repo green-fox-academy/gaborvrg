@@ -24,21 +24,18 @@
   <script src="attribute-1.js"></script> -->
 
   <script>
-    
-  var imgUrl = document.querySelector('img');
+
+  let imgUrl = document.querySelector('img');
   console.log(imgUrl.getAttribute('src'));
   imgUrl.setAttribute('src', 'me.png');
 
-  var originalLink = document.querySelector('a')
+  let originalLink = document.querySelector('a');
   originalLink.setAttribute('href', 'https://www.greenfoxacademy.com');
 
-  console.log(document.querySelector('.this-one'));
-
-  document.querySelector('.this-one').disabled = true;
-
-  document.querySelector('.this-one').innerText = 'Don\'t click me!';
-
-
+  let secondButton = document.querySelector('.this-one');
+  secondButton.disabled = true;
+  secondButton.innerText = 'Don\'t click me!';
+  
   </script>
 
 </body>

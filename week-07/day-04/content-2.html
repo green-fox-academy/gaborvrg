@@ -16,11 +16,13 @@
 
     // fill every paragraph with the last one's content.
 
-    document.querySelector('.cat').innerHTML = document.querySelector('.dog').textContent;
-    document.querySelector('.balloon').innerHTML = document.querySelector('.dog').textContent;
-    document.querySelector('.apple').innerHTML = document.querySelector('.dog').textContent;
+     let allPara = document.querySelectorAll('p');
+     let lastPara = document.querySelector('.dog');
 
-
+     allPara.forEach(function(elem) {
+      elem.textContent = lastPara.textContent;
+     });
+     
   </script>
 
 <!--   OR
