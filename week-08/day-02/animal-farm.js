@@ -39,7 +39,7 @@ function Farm(kind) {
     };
     this.slaughter = function() {
         var minIdx = 0;
-        var min = new Animal().hunger; // peldanyositva az Animal fugveny(contructor) es meghivva a hunger 
+        var min = new Animal().hunger; // peldanyositva az Animal fugveny(constructor) es meghivva a hunger 
         this.listOfAnimals.forEach(function(elem,idx) {
             if (elem.hunger < min) {
                 min = elem.hunger;

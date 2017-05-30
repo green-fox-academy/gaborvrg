@@ -25,10 +25,16 @@ button {
 
 .upper {
   flex: 1 1 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .bottom {
   flex: 1 1 0%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 
