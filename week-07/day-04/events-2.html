@@ -10,6 +10,7 @@
     <li>balloon</li>
     <li>cat</li>
     <li>dolphin</li>
+    <li>dolphin</li>
   </ul>
   <button>How many items are in the list?</button>
   <p class="result">dunno :(</p>
@@ -26,15 +27,16 @@
   <script>
     
     'use strict';
-    var button = document.querySelector('button');
-
+    let button = document.querySelector('button');
+    let result = document.querySelector('.result');
+  
     function howMuchInTheList() {
-      var list = document.querySelector('ul');
-      
-      console.log(list);
+      let ilTagList = document.querySelectorAll('li');
+      let liNum = ilTagList.length;
+      console.log(liNum);
+      result.textContent = liNum + " <li> tags in the list";
     }
-
-
+    
     button.addEventListener('click', howMuchInTheList);
 
 
