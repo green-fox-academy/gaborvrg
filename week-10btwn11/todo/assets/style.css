@@ -18,7 +18,7 @@
 .title {
   margin: 0;
   padding: 0;
-  height: 150px;
+  min-height: 150px;
   font-family: 'Open Sans', sans-serif;
   font-size: 50px;
   color: #BBB;
@@ -39,7 +39,7 @@
   margin: 0;
   padding-left: 10px;
   width: 100%;
-  min-height: 100%;
+  height: 48px;
   border: 2px solid #BBB;
   font-size: 25px;
 }
@@ -67,9 +67,11 @@ title p {
   background: #aaa;
   /*margin: 5px 42px;*/
   /*max-height: 100vh;*/
-  display: flex;
-  flex-direction: column;
+/*  display: flex;
+  flex-direction: column;*/
   margin-top: 30px;
+  padding-right: 10px;
+  overflow : auto;
 
 }
 

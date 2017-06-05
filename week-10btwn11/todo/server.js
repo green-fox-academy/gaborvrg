@@ -3,7 +3,7 @@
 const express = require('express');
 const mysql = require("mysql");
 const bodyParser = require('body-parser');
-const app = express();
+let app = express();
 
 app.use('/assets', express.static('assets'));
 app.use('/img', express.static('img'));
@@ -50,6 +50,18 @@ app.post('/add-todos', function(req, res) {
     res.send(rows);
   });
 });
+
+app.delete('/todos/:id', function(req, res) {
+  console.log(req.params.id);
+  conn.query('DELETE FROM todolist WHERE id = "' + req.params.id + '"', function(err, rows){ 
+    if(err) {
+      console.log(err.toString());
+      return;
+    }
+    res.send(rows);
+  });
+});
+
 
 
 app.listen(3000, function() {
