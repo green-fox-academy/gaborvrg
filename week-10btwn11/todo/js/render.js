@@ -49,7 +49,6 @@ let renderTodo = (function() {
 				stateTodo = 0;
 			}
 
-
 			todoCheck.addEventListener('click', function(e) {
 				console.log(stateTodo);
 				newAjax('PUT', url + 'todos/' +  todoCheck.id, stateTodo , callback);
