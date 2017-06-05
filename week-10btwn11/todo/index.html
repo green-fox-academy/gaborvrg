@@ -4,13 +4,27 @@
 	<meta charset="UTF-8">
 	<title>Todo App</title>
 	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
-  <link rel="stylesheet" href="style.css" class="css">
+  <link rel="stylesheet" href="./assets/style.css" class="css">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet">
+	<script src="js/ajax.js"></script>
+  <script src="js/render.js"></script>
+
 </head>
 <body>
 	<div class="wrapper">
 		<div class="box">
-			
+			<div class="title"><p>TODOS</p></div>
+			<div class="form">
+				<input class="add-todo" type="text" name="todo" value="">
+				<div class="add-button"><p>Add</p></div>
+			</div>
+			<div class="todos"></div>
 		</div>
 	</div>	
+	<script src="./js/controller.js"></script>
 </body>
 </html>
+
+
+
+
