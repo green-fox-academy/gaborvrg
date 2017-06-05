@@ -1,7 +1,7 @@
 'use strict';
 
 let ajax = (function () {
-	function load(method, url, callback, input) {
+	function load(method, url, input, callback) {
 
 		let data = {
 			todoText: input,

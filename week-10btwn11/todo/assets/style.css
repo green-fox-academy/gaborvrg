@@ -85,7 +85,7 @@ title p {
   display: flex;
   align-items: center;
   padding-left: 20px;
-  min-height: 40px;  
+  height: 40px;  
   font-size: 25px;
 
 }

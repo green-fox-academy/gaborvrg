@@ -9,13 +9,10 @@ let addButton = document.querySelector('.add-button');
 let addTodo = document.querySelector('.add-todo');
 
 
-
 addButton.addEventListener('click', function(){
-	newAjax('Post', url + 'add-todos', render, addTodo.value);
+	newAjax('Post', url + 'add-todos', addTodo.value);
+	newAjax('Get', url + 'todos', addTodo.value, render);
 	addTodo.value = '';
 });
 
-
-newAjax('Get', url + 'todos', render);
-
-
+newAjax('Get', url + 'todos', addTodo.value, render);
