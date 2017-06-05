@@ -2,12 +2,10 @@
 
 let renderTodo = (function() {
 
-
 	function render(data) {
 		let todoClass = document.querySelector('.todos');
-		console.log(data);
+		todoClass.innerHTML = '';
 		data.forEach(function(elem, idx) {
-			// console.log(elem);
 			let todoContainer = document.createElement('div');
 			todoContainer.className = 'todoItem';
 			todoClass.appendChild(todoContainer);
@@ -24,8 +22,6 @@ let renderTodo = (function() {
 			} else {
 				todoCheck.setAttribute('class', 'checked');
 			}
-			
-			
 
 			todoContainer.appendChild(todoText);
 			todoText.textContent = elem.text;
@@ -41,7 +37,6 @@ let renderTodo = (function() {
 			});
 		});
 	}
-
 
 	return {
 		render: render
