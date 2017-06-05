@@ -41,7 +41,7 @@ app.get('/todos', function(req, res) {
 });
 
 app.post('/add-todos', function(req, res) {
-  console.log(req.body.todoText);
+  // console.log(req.body.todoText);
   conn.query('INSERT INTO todolist (text) VALUES ("' + req.body.todoText + '")', function(err, rows){ 
     if(err) {
       console.log(err.toString());
@@ -54,6 +54,18 @@ app.post('/add-todos', function(req, res) {
 app.delete('/todos/:id', function(req, res) {
   console.log(req.params.id);
   conn.query('DELETE FROM todolist WHERE id = "' + req.params.id + '"', function(err, rows){ 
+    if(err) {
+      console.log(err.toString());
+      return;
+    }
+    res.send(rows);
+  });
+});
+
+app.put('/todos/:id', function(req, res) {
+  console.log(req.params.id);
+  console.log(req.body.todoText);
+  conn.query('UPDATE todolist SET state = "' + req.body.todoText + '" WHERE id = "' + req.params.id + '"', function(err, rows){ 
     if(err) {
       console.log(err.toString());
       return;
