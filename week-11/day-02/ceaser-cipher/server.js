@@ -32,7 +32,7 @@ let decoder = function(text, shift) {
 	let textLetterList = text.split('');
 	textLetterList.forEach(function(elem) {
 		lettercode = elem.charCodeAt();
-		if (lettercode !== 32) {
+		if (lettercode !== 32) { // A-Z 65-92, a-z 97-122
 			decodedLetterList.push(String.fromCharCode(lettercode - 3));
 		} else {
 			decodedLetterList.push(String.fromCharCode(lettercode));
@@ -47,22 +47,21 @@ let decoder = function(text, shift) {
 };
 
 app.post('/decode', function(req, res) {
-	// dataCheck(req.body.text, req.body.shift);
+	dataCheck(req.body.text, req.body.shift);
 	let decodedText = decoder(req.body.text, req.body.shift);
-	console.log(decodedText.text);
+	// console.log(decodedText.text);
 	// res.send(decoder(req.body.text, req.body.shift));
 	conn.query('INSERT INTO ceasar (decoded_text) VALUES ("' + decodedText.text  + '")', function(err,rows){
 		if(err) {
 			console.log(err.toString());
 			return;
 		} else {
-		 // res.send(decoder(req.body.text, req.body.shift));
 		conn.query('SELECT * FROM ceasar', function(err,rows){
 			if(err) {
 				console.log(err.toString());
 				return;
 			} else {
-				console.log(rows);
+				// console.log(rows);
 				res.send(rows);
 			}
 		});
@@ -70,17 +69,23 @@ app.post('/decode', function(req, res) {
 	});
 });
 
-app.get('/decode/all', function(req, res) {
-	console.log(res.url);
-});
+let dataCheck = function(text, shift) {
+	if (shift < -25 || shift > 25) {
+		console.log('Error: out of range');
+	}
+	return text, shift;
+};
+
+
+// app.get('/decode/all', function(req, res) {
+// 	console.log(res.url);
+// });
 
 app.listen(3000, function() {
 	console.log('server is running');
 });
 
-// let dataCheck = function(text, shift) {
-	
-// };
+
 
 
 
