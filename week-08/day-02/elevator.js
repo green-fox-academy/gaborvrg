@@ -1,48 +1,94 @@
 'use strict';
-// The program should have three objects: elevatorController, elevatorModel and elevatorView.
 
-
-let controlButtons = document.querySelectorAll('button');
-console.log(controlButtons);
-
-let elevatorController = {
-  //  The object should have a method which handling the events. 
-  //  It invokes the elevatorModel's correct method to moving the elevator, add or remove people.
-  start: function () {
-    controlButtons[0].addEventListener('click', function() {console.log(controlButtons[0].className);});
-    controlButtons[1].addEventListener('click', function() {console.log(controlButtons[1].className);});
-    controlButtons[2].addEventListener('click', function() {console.log(controlButtons[2].className);});
-    controlButtons[3].addEventListener('click', function() {console.log(controlButtons[3].className);});
+class ElevatorModel {
+  constructor() {
+    this.maxFloor = 10;
+    this.maxPeople = 20;
+    this.peopleInElevator = 0;
+    this.elevatorPosition = 0;
+    this.elevatorDirection = '';
   }
-};
 
+  addPeople() {
+    this.peopleInElevator += 1;
+    this.checkPeopleAndFloorLimit();
+    return this.peopleInElevator;
+  }
 
+  removePeople() {
+    this.peopleInElevator -= 1;
+    this.checkPeopleAndFloorLimit();
+    return this.peopleInElevator;
+  }
 
+  movingUp() {
+    this.elevatorDirection = 'up';
+    this.elevatorPosition += 1;
+    this.checkPeopleAndFloorLimit();
+    return this.elevatorPosition;
+  }
 
-let elevatorModel = {
-  // the object takes two parameters, the maximum floor and the maximum people.
+  movingDown() {
+    this.elevatorDirection = 'down';
+    this.elevatorPosition -= 1;
+    this.checkPeopleAndFloorLimit();
+    return this.elevatorPosition;
+  }
 
-  // The object should track the following things:
-  // - elevator position
-  // - elevator direction
-  // - people in the elevator
-  // - add people
-  // - remove people
+  checkPeopleAndFloorLimit() {
+    if (this.elevatorPosition > this.maxFloor) {
+      this.elevatorPosition = this.maxFloor;
+      this.elevatorDirection = 'ceil';
+    } else if (this.elevatorPosition < 0) {
+      this.elevatorPosition = 0;
+      this.elevatorDirection = 'floor';
+    }
 
-  // It should have a method that check if the numbers of people or the floor are beyond the limits.
-  // The object invokes the elevatorView.
+    if (this.peopleInElevator > this.maxPeople) {
+      this.peopleInElevator = this.maxPeople;
+    } else if (this.peopleInElevator < 0) {
+      this.peopleInElevator = 0;
+    }
+  }
 
-};
+  main() {
+    this.buttonUp = document.querySelector('.up');
+    this.buttonDown = document.querySelector('.down');
+    this.buttonAdd = document.querySelector('.add');
+    this.buttonRemove = document.querySelector('.remove');
 
+    this.buttonUp.addEventListener('click', () => {
+      this.movingUp();
+      console.log(this.elevatorPosition, this.elevatorDirection);
+    });
 
+    this.buttonDown.addEventListener('click', () => {
+      this.movingDown();
+      console.log(this.elevatorPosition, this.elevatorDirection);
+    });
 
-let elevatorView = {
-  //  The object draw the elevator's state to the browser.
+    this.buttonAdd.addEventListener('click', () => {
+      this.addPeople();
+      console.log(this.peopleInElevator);
+    });
 
-};
+    this.buttonRemove.addEventListener('click', () => {
+      this.removePeople();
+      console.log(this.peopleInElevator);
+    });
+  }
+}
 
+class ElevatorView {
+}
 
-elevatorController.start();
+class ElevatorController {
+  handler() {
+    this.eModel = new ElevatorModel();
+    this.eView = new ElevatorView();
+    this.eModel.main();
+  }
+}
 
-
-
+const buidling = new ElevatorController();
+buidling.handler();

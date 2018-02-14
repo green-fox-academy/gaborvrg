@@ -1,0 +1,24 @@
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: border-box;
+}
+
+.container {
+    width: 600px;
+    height: 400px;
+    border: 1px solid #ccc;
+    display: flex;
+
+}
+
+.panel {
+    border: 1px solid #ccc;
+    width: 50%;
+}
+
+button {
+    font-size: 0.5rem;
+}
