@@ -22,3 +22,9 @@ html {
 button {
     font-size: 0.5rem;
 }
+
+.floor {
+    width: 100px;
+    height: 25px;
+    border: 1px solid #555;
+}

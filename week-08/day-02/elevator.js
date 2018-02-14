@@ -1,9 +1,9 @@
 'use strict';
 
 class ElevatorModel {
-  constructor() {
-    this.maxFloor = 10;
-    this.maxPeople = 20;
+  constructor(maxfloor, maxpeople) {
+    this.maxFloor = maxfloor;
+    this.maxPeople = maxpeople;
     this.peopleInElevator = 0;
     this.elevatorPosition = 0;
     this.elevatorDirection = '';
@@ -80,15 +80,25 @@ class ElevatorModel {
 }
 
 class ElevatorView {
+  drawElevator(maxfloor) {
+    this.elevator = document.querySelector('.panel_right');
+    for (let index = 0; index < maxfloor; index++) {
+      const div = document.createElement('div');
+      div.className = `floor floor${index}`;
+      this.elevator.appendChild(div);
+    }
+    console.log('eView');
+  }
 }
 
 class ElevatorController {
-  handler() {
-    this.eModel = new ElevatorModel();
+  handler(maxfloor, maxpeople) {
     this.eView = new ElevatorView();
+    this.eView.drawElevator(maxfloor);
+    this.eModel = new ElevatorModel(maxfloor, maxpeople);
     this.eModel.main();
   }
 }
 
-const buidling = new ElevatorController();
-buidling.handler();
+const building = new ElevatorController();
+building.handler(10, 10);
