@@ -104,4 +104,4 @@ class ElevatorController {
 }
 
 const building = new ElevatorController();
-building.handler(20, 10);
+building.handler(10, 10);

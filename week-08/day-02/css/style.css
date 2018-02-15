@@ -1,5 +1,9 @@
 html {
     box-sizing: border-box;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 *, *:before, *:after {
@@ -11,20 +15,47 @@ html {
     height: 400px;
     border: 1px solid #ccc;
     display: flex;
+    background-color: tomato;
 
 }
 
 .panel {
-    border: 1px solid #ccc;
     width: 50%;
 }
 
+.panel_left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.panel_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.upper, .bottom {
+    margin: 60px auto;
+}
+
 button {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
+    border-radius: 5px;
+    display: block;
+    margin: 0 auto;
+    width: 100px;
+    height: 25px;
+    margin: 10px;
 }
 
 .floor {
     width: 100px;
     height: 25px;
     border: 1px solid #555;
+    background-color: white;
+    border-radius: 5px;
+    line-height: 25px;
+    text-align: center;
 }
