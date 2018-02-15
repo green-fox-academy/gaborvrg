@@ -58,4 +58,6 @@ button {
     border-radius: 5px;
     line-height: 25px;
     text-align: center;
+    font-weight: bold;
+    margin: 1px;
 }
