@@ -2,6 +2,7 @@
 
 class ElevatorModel {
   constructor(maxfloor, maxpeople) {
+    this.eView = new ElevatorView();
     this.maxFloor = maxfloor;
     this.maxPeople = maxpeople;
     this.peopleInElevator = 0;
@@ -12,12 +13,14 @@ class ElevatorModel {
   addPeople() {
     this.peopleInElevator += 1;
     this.checkPeopleAndFloorLimit();
+    this.eView.drawElevator(this.maxFloor, this.elevatorPosition, this.peopleInElevator);
     return this.peopleInElevator;
   }
 
   removePeople() {
     this.peopleInElevator -= 1;
     this.checkPeopleAndFloorLimit();
+    this.eView.drawElevator(this.maxFloor, this.elevatorPosition, this.peopleInElevator);
     return this.peopleInElevator;
   }
 
@@ -25,6 +28,7 @@ class ElevatorModel {
     this.elevatorDirection = 'up';
     this.elevatorPosition += 1;
     this.checkPeopleAndFloorLimit();
+    this.eView.drawElevator(this.maxFloor, this.elevatorPosition, this.peopleInElevator);
     return this.elevatorPosition;
   }
 
@@ -32,16 +36,17 @@ class ElevatorModel {
     this.elevatorDirection = 'down';
     this.elevatorPosition -= 1;
     this.checkPeopleAndFloorLimit();
+    this.eView.drawElevator(this.maxFloor, this.elevatorPosition, this.peopleInElevator);
     return this.elevatorPosition;
   }
 
   checkPeopleAndFloorLimit() {
-    if (this.elevatorPosition > this.maxFloor) {
+    if (this.elevatorPosition >= this.maxFloor) {
       this.elevatorPosition = this.maxFloor;
       this.elevatorDirection = 'ceil';
-    } else if (this.elevatorPosition < 0) {
-      this.elevatorPosition = 0;
+    } else if (this.elevatorPosition <= 0) {
       this.elevatorDirection = 'floor';
+      this.elevatorPosition = 0;
     }
 
     if (this.peopleInElevator > this.maxPeople) {
@@ -59,46 +64,44 @@ class ElevatorModel {
 
     this.buttonUp.addEventListener('click', () => {
       this.movingUp();
-      console.log(this.elevatorPosition, this.elevatorDirection);
     });
 
     this.buttonDown.addEventListener('click', () => {
       this.movingDown();
-      console.log(this.elevatorPosition, this.elevatorDirection);
     });
 
     this.buttonAdd.addEventListener('click', () => {
       this.addPeople();
-      console.log(this.peopleInElevator);
     });
 
     this.buttonRemove.addEventListener('click', () => {
       this.removePeople();
-      console.log(this.peopleInElevator);
     });
+    this.eView.drawElevator(this.maxFloor);
   }
 }
 
 class ElevatorView {
-  drawElevator(maxfloor) {
-    this.elevator = document.querySelector('.panel_right');
-    for (let index = 0; index < maxfloor; index++) {
+  drawElevator(maxfloor, elevatorPosition = 0, peopleInElevator = 0) {
+    const elevator = document.querySelector('.panel_right');
+    elevator.innerHTML = '';
+    for (let index = maxfloor; index >= 0; index--) {
       const div = document.createElement('div');
       div.className = `floor floor${index}`;
-      this.elevator.appendChild(div);
+      elevator.appendChild(div);
     }
-    console.log('eView');
+    document.querySelector('.floor' + elevatorPosition).textContent = peopleInElevator;
+    document.querySelector('.floor' + elevatorPosition).style.backgroundColor = 'green';
+
   }
 }
 
 class ElevatorController {
   handler(maxfloor, maxpeople) {
-    this.eView = new ElevatorView();
-    this.eView.drawElevator(maxfloor);
     this.eModel = new ElevatorModel(maxfloor, maxpeople);
     this.eModel.main();
   }
 }
 
 const building = new ElevatorController();
-building.handler(10, 10);
+building.handler(20, 10);
