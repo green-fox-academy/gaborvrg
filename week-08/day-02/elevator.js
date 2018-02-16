@@ -1,4 +1,18 @@
-'use strict';
+/* eslint-env browser */
+
+class ElevatorView {
+  drawElevator(maxfloor, elevatorPosition = 0, peopleInElevator = 0) {
+    this.elevator = document.querySelector('.panel_right');
+    this.elevator.innerHTML = '';
+    for (let index = maxfloor; index >= 0; index -= 1) {
+      const div = document.createElement('div');
+      div.className = `floor floor${index}`;
+      this.elevator.appendChild(div);
+    }
+    document.querySelector(`.floor${elevatorPosition}`).textContent = peopleInElevator;
+    document.querySelector(`.floor${elevatorPosition}`).style.backgroundColor = 'green';
+  }
+}
 
 class ElevatorModel {
   constructor(maxfloor, maxpeople) {
@@ -78,21 +92,6 @@ class ElevatorModel {
       this.removePeople();
     });
     this.eView.drawElevator(this.maxFloor);
-  }
-}
-
-class ElevatorView {
-  drawElevator(maxfloor, elevatorPosition = 0, peopleInElevator = 0) {
-    const elevator = document.querySelector('.panel_right');
-    elevator.innerHTML = '';
-    for (let index = maxfloor; index >= 0; index--) {
-      const div = document.createElement('div');
-      div.className = `floor floor${index}`;
-      elevator.appendChild(div);
-    }
-    document.querySelector('.floor' + elevatorPosition).textContent = peopleInElevator;
-    document.querySelector('.floor' + elevatorPosition).style.backgroundColor = 'green';
-
   }
 }
 
